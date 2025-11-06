@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Lester Mackey: Subseasonal Climate Forecast Rodeo</title>
+    <meta name="keywords" content="Subseasonal Climate Forecast Rodeo, temperature, precipitation, western United States, US Bureau of Reclamation, National Oceanic and Atmospheric Administration (NOAA), Innocentive, challenge, prediction" />
+    <meta name="description" content="Lester Mackey's website" />
+    <link rel="stylesheet" type="text/css" href="default.css" />
+
+    <!-- Google analytics tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9971253-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="upbg"></div>
+
+    <div id="outer">
+      <div id="header">
+	<div id="headercontent">
+	  <h1>Lester Mackey</h1>
+	  <h2>&#108;&#119;&#109;&#97;&#99;&#107;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</h2>
+	</div>
+      </div>
+
+      <!--
+	  A search tool
+	  <form method="post" action="">
+	    <div id="search">
+	      <input type="text" class="text" maxlength="64" name="keywords" />
+	      <input type="submit" class="submit" value="Search" />
+	    </div>
+	  </form>
+	  -->
+
+      <div id="headerpic"></div>
+
+      
+      <div id="menu">
+	<ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="research.html">Research</a></li>
+      <li><a href="talks.html">Talks</a></li>
+	  <li><a href="teaching.html">Teaching</a></li>
+	  <li><a href="dinosaurplanet.html">Netflix Prize</a></li>
+	  <li><a href="alsprize4life.html">ALS Prize4Life</a></li>
+	  <li><a href="forecastrodeo.html" class="active">Forecast Rodeo</a></li>
+	  <li><a href="contact.html">Contact</a></li>
+	  <li><a href="bio.html">Bio</a></li>
+	  <li><a href="papers/Lester_Mackey-CV.pdf">CV</a></li>
+	</ul>
+      </div>
+      <div id="menubottom"></div>
+
+      
+      <div id="content">
+	<div id="primarycontainer">
+	  <div id="primarycontent">
+	    <h4>Subseasonal Climate Forecast Rodeo</h4>
+	    <div class="contentarea">
+	      <!-- Normal content area start -->
+	      
+	      <img src="images/fcstrodeo_domain.png" width="25%" class="left" alt="Subseasonal Climate Forecast Rodeo domain" />
+          <p> Water managers in the western United States rely on longterm
+          forecasts of temperature and precipitation to prepare for droughts
+          and other wet weather extremes. To improve the accuracy of these
+          longterm forecasts, the U.S. Bureau of Reclamation (USBR) and the National Oceanic and Atmospheric Administration (NOAA) launched
+          the <a href="https://www.drought.gov/drought/sub-seasonal-climate-forecast-rodeo">Subseasonal Climate Forecast Rodeo</a>, a year-long real-time
+          forecasting challenge in which participants aimed to skillfully predict temperature and precipitation in the western U.S. two to four
+          weeks and four to six weeks in advance.
+          <!--Here we present and
+          evaluate our machine learning approach to the Rodeo and release
+          our SubseasonalRodeo dataset, collected to train and evaluate our
+          forecasting system.-->
+          </p>
+          <p>
+	  Jessica Hwang, 
+	  <a href="http://stanford.edu/~pauloo/">Paulo Orenstein</a>,
+          <a href="http://www.judahcohen.org/">Judah Cohen</a>, 
+	  <a href="http://fraenkel.mit.edu/">Ernest Fraenkel</a>, and I developed a machine learning approach to the Rodeo and a <a href="https://doi.org/10.7910/DVN/IHBANG">SubseasonalRodeo dataset</a> for training and evaluating subseasonal forecasting systems.
+	  Our system is an ensemble of two nonlinear regression models. The first integrates a diverse collection of meteorological measurements and dynamic model forecasts and prunes irrelevant predictors using a customized multitask model selection procedure. The second uses only historical measurements of the target variable (temperature or precipitation) and introduces multitask nearest neighbor features into a weighted local linear regression. Each model alone outperforms the debiased operational U.S. Climate Forecasting System (CFSv2), and, over 2011-2018, an ensemble of our regression models and debiased CFSv2 improves debiased CFSv2 skill by 40-50% for temperature and 129-169% for precipitation. 
+          For more details see <a href="https://arxiv.org/abs/1809.07394">Improving Subseasonal Forecasting in the Western U.S. with Machine Learning</a> or these <a href="papers/rodeo-slides.pdf">talk slides</a>.
+	      </p>
+		  <p>For information on our latest subseasonal forecasting work, please see our <a href="https://www.microsoft.com/en-us/research/project/subseasonal-climate-forecasting/">project page</a>.</p>
+	      <!-- Normal content area end -->
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Secondary content: (by default, the narrower right column)--> 		
+	<div id="secondarycontent">
+	  <!-- Secondary content area start -->
+	  
+	  <!-- Set any div's class to "box" to encapsulate it in (you guessed it) a box -->
+	  <div class="box">
+	    <h4>In the news</h4>
+
+	    <div class="contentarea">
+	      <ul>
+		<li><a href="https://earthenvironmentcommunity.nature.com/posts/improving-subseasonal-forecasting-with-machine-learning">Improving Subseasonal Forecasting with Machine Learning</a>, Nature Communities Blog, 6/16/2023</li>
+		<li><a href="https://blogs.microsoft.com/ai/ai-subseasonal-weather-forecast/">Is drought on the horizon? Researchers turn to AI in a bid to improve forecasts</a>, Microsoft AI Blog, 3/7/2019</li>
+		<li><a href="https://www.microsoft.com/en-us/research/blog/predicting-the-holy-grail-of-climate-forecasting-a-new-model-and-a-new-public-dataset/">Predicting holy grail of climate forecasting</a>, Microsoft Research Blog, 3/7/2019</li>
+		<li><a href="https://web.archive.org/web/20190929013341/https://www.usbr.gov/newsroom/newsrelease/detail.cfm?RecordID=64969">Teams complete Bureau of Reclamation's Sub-Seasonal Climate Rodeo Forecast outperforming the baseline forecasts</a>, U.S. Bureau of Reclamation, 3/7/2019</li>
+	      </ul>
+	    </div>
+	  </div>
+
+	  <!-- Secondary content area end -->
+	</div>
+
+
+      </div>
+
+      <!-- Some extra padding at the end -->
+      <div id="endpadding">
+      </div>
+
+      <div id="footer">
+	<div class="left">&copy; 2019 Lester Mackey. All rights reserved.</div>
+	<div class="right">Design by <a href="https://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+      </div>
+      
+    </div>
+
+  </body>
+</html>

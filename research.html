@@ -1,0 +1,1348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Lester Mackey: Research</title>
+    <meta name="keywords" content="lester mackey, computer science, machine learning, statistics, social good, high-dimensional, probability, concentration, research, stanford, microsoft research" />
+    <meta name="description" content="Lester Mackey's website" />
+    <link rel="stylesheet" type="text/css" href="default.css" />
+    
+    <!-- Google analytics tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9971253-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id="upbg"></div>
+    <div id="outer">
+      <div id="header">
+	<div id="headercontent">
+	  <h1>Lester Mackey</h1>
+		<h2>&#108;&#119;&#109;&#97;&#99;&#107;&#101;&#121;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</h2>
+	  <!--<h2>Personal homepage</h2>-->
+	</div>
+      </div>
+
+      <div id="headerpic"></div>
+
+      <div id="menu">
+	<ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="talks.html">Talks</a></li>
+	  <li><a href="teaching.html">Teaching</a></li>
+	  <li><a href="dinosaurplanet.html">Netflix Prize</a></li>
+	  <li><a href="alsprize4life.html">ALS Prize4Life</a></li>
+	  <li><a href="forecastrodeo.html">Forecast Rodeo</a></li>
+	  <li><a href="contact.html">Contact</a></li>
+	  <li><a href="bio.html">Bio</a></li>
+	  <li><a href="papers/Lester_Mackey-CV.pdf">CV</a></li>
+	</ul>
+      </div>
+      <div id="menubottom"></div>
+
+      <div id="content">
+	<div id="normalcontent">
+      <!--
+	  <h4>Research Interests</h4>
+	  <div class="contentarea">
+	    <ul class="normal">
+	      <li><b>Statistical machine learning</b></li>
+          <li><b>Scalable algorithms</b></li>
+	      <li><b>High-dimensional statistics</b></li>
+          <li><b>Approximate inference</b></li>
+	      <li><b>Probability</b></li>
+	    </ul>
+	  </div>
+	  <div class="divider1"></div>
+       -->
+	  <h4>In the Pipeline</h4>
+	  <div class="contentarea">
+	    <ul class="normal">
+          <li><b>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner.  (<a href="https://www.arxiv.org/pdf/2510.03206">arxiv</a>)</b>
+          <br /><i>Cai Zhou, Chenxiao Yang, Yi Hu, Chenyu Wang, Chubin Zhang, Muhan Zhang, Lester Mackey, Tommi Jaakkola, Stephen Bates, and Dinghuai Zhang.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#ccdd">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ccdd" class="collapse">
+              <p></p>
+              <p>
+              Diffusion language models, especially masked discrete diffusion models, have achieved great success recently. While there are some theoretical and primary empirical results showing the advantages of latent reasoning with looped transformers or continuous chain-of-thoughts, continuous diffusion models typically underperform their discrete counterparts. In this paper, we argue that diffusion language models do not necessarily need to be in the discrete space. In particular, we prove that continuous diffusion models have stronger expressivity than discrete diffusions and looped transformers. We attribute the contradiction between the theoretical expressiveness and empirical performance to their practical trainability: while continuous diffusion provides intermediate supervision that looped transformers lack, they introduce additional difficulty decoding tokens into the discrete token space from the continuous representation space. We therefore propose Coevolutionary Continuous Discrete Diffusion (CCDD), which defines a joint multimodal diffusion process on the union of a continuous representation space and a discrete token space, leveraging a single model to simultaneously denoise in the joint space. By combining two modalities, CCDD is expressive with rich semantics in the latent space, as well as good trainability and sample quality with the help of explicit discrete tokens. We also propose effective architectures and advanced training/sampling techniques for CCDD, which reveals strong empirical performance in extensive language modeling experiments on real-world tasks.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Causal integration of chemical structures improves representations of microscopy images for morphological profiling.  (<a href="https://arxiv.org/pdf/2504.09544">arxiv</a>, <a href="https://github.com/microsoft/micon">code</a>)</b>
+          <br /><i>Yemin Yu, Neil Tenenholtz, Lester Mackey, Ying Wei, David Alvarez-Melis, Ava P. Amini, and Alex X. Lu.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#micon">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="micon" class="collapse">
+              <p></p>
+              <p>
+              Recent advances in self-supervised deep learning have improved our ability to quantify cellular morphological changes in high-throughput microscopy screens, a process known as morphological profiling. However, most current methods only learn from images, despite many screens being inherently multimodal, as they involve both a chemical or genetic perturbation as well as an image-based readout. We hypothesized that incorporating chemical compound structure during self-supervised pre-training could improve learned representations of images in high-throughput microscopy screens. We introduce a representation learning framework, MICON (Molecular-Image Contrastive Learning), that models chemical compounds as treatments that induce counterfactual transformations of cell phenotypes. MICON significantly outperforms classical hand-crafted features such as CellProfiler and existing deep-learning-based representation learning methods in challenging evaluation settings where models must identify reproducible effects of drugs across independent replicates and data-generating centers. We demonstrate that incorporating chemical compound information into the learning process provides consistent improvements in our evaluation setting and that modeling compounds specifically as treatments in a causal framework outperforms approaches that directly align images and compounds in a single representation space. Our findings point to a new direction for representation learning in morphological profiling, suggesting that methods should explicitly account for the multimodal nature of microscopy screening data.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Cheap Permutation Testing.  (<a href="https://arxiv.org/pdf/2502.07672">arxiv</a>, <a href="https://github.com/microsoft/cheap-permutations">code</a>)</b>
+          <br /><i>Carles Domingo-Enrich, Raaz Dwivedi, and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#cheaper">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="cheaper" class="collapse">
+              <p></p>
+              <p>
+              Permutation tests are a popular choice for distinguishing distributions and testing independence, due to their exact, finite-sample control of false positives and their minimax optimality when paired with U-statistics. However, standard permutation tests are also expensive, requiring a test statistic to be computed hundreds or thousands of times to detect a separation between distributions. In this work, we offer a simple approach to accelerate testing: group your datapoints into bins and permute only those bins. For U and V-statistics, we prove that these cheap permutation tests have two remarkable properties. First, by storing appropriate sufficient statistics, a cheap test can be run in time comparable to evaluating a single test statistic. Second, cheap permutation power closely approximates standard permutation power. As a result, cheap tests inherit the exact false positive control and minimax optimality of standard permutation tests while running in a fraction of the time. We complement these findings with improved power guarantees for standard permutation testing and experiments demonstrating the benefits of cheap permutations over standard maximum mean discrepancy (MMD), Hilbert-Schmidt independence criterion (HSIC), random Fourier feature, Wilcoxon-Mann-Whitney, cross-MMD, and cross-HSIC tests.  
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Bounding Hellinger Distance with Stein's Method.  (<a href="https://arxiv.org/pdf/2411.04322">arxiv</a>)</b>
+          <br /><i>Morgane Austern and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#hellinger">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="hellinger" class="collapse">
+              <p></p>
+              <p>
+              This work introduces a new, explicit bound on the Hellinger distance between a continuous random variable and a Gaussian with matching mean and variance. As example applications, we derive a quantitative Hellinger central limit theorem and efficient concentration inequalities for U-statistics.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Reflections from the Workshop on AI-Assisted Decision Making for Conservation.  (<a href="https://arxiv.org/pdf/2307.08774.pdf">arxiv</a>)</b>
+          <br /><i>Lily Xu, Esther Rolf, Sara Beery, Joseph R. Bennett, Tanya Berger-Wolf, Tanya Birch, Elizabeth Bondi-Kelly, Justin Brashares, Melissa Chapman, Anthony Corso, Andrew Davies, Nikhil Garg, Angela Gaylard, Robert Heilmayr, Hannah Kerner, Konstantin Klemmer, Vipin Kumar, Lester Mackey, Claire Monteleoni, Paul Moorcroft, Jonathan Palmer, Andrew Perrault, David Thau, and Milind Tambe.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#aiconservation">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="aiconservation" class="collapse">
+              <p></p>
+              <p>
+              In this white paper, we synthesize key points made during presentations and discussions from the AI-Assisted Decision Making for Conservation workshop, hosted by the Center for Research on Computation and Society at Harvard University on October 20-21, 2022. We identify key open research questions in resource allocation, planning, and interventions for biodiversity conservation, highlighting conservation challenges that not only require AI solutions, but also require novel methodological advances. In addition to providing a summary of the workshop talks and discussions, we hope this document serves as a call-to-action to orient the expansion of algorithmic decision-making approaches to prioritize real-world conservation challenges, through collaborative efforts of ecologists, conservation decision-makers, and AI researchers.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Budget-Constrained Bounds for Mini-Batch Estimation of Optimal Transport.  (<a href="https://arxiv.org/pdf/2210.13630.pdf">arxiv</a>)</b>
+          <br /><i>David Alvarez-Melis, Nicolo Fusi, Lester Mackey, and Tal Wagner.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#mbot">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="mbot" class="collapse">
+              <p></p>
+              <p>
+              Optimal Transport (OT) is a fundamental tool for comparing probability distributions, but its exact computation remains prohibitive for large datasets. In this work, we introduce novel families of upper and lower bounds for the OT problem constructed by aggregating solutions of mini-batch OT problems. The upper bound family contains traditional minibatch averaging at one extreme and a tight bound found by optimal coupling of mini-batches at the other. In between these extremes, we propose various methods to construct bounds based on a fixed computational budget. Through various experiments, we explore the tradeoff between computational budget and bound tightness and show the usefulness of these bounds in computer vision applications.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Efficient Concentration with Gaussian Approximation.  (<a href="https://arxiv.org/pdf/2208.09922.pdf">arxiv</a>, <a href="https://github.com/lmackey/gauss_conc">code</a>)</b>
+          <br /><i>Morgane Austern and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#gaussconc">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="gaussconc" class="collapse">
+              <p></p>
+              <p>
+                Concentration inequalities for the sample mean, like those due to Bernstein and Hoeffding, are valid for any sample size but overly conservative, yielding confidence intervals that are unnecessarily wide. The central limit theorem (CLT) provides asymptotic confidence intervals with optimal width, but these are invalid for all sample sizes. To resolve this tension, we develop new computable concentration inequalities with asymptotically optimal size, finite-sample validity, and sub-Gaussian decay. These bounds enable the construction of efficient confidence intervals with correct coverage for any sample size. We derive our inequalities by tightly bounding the Hellinger distance, Stein discrepancy, and Wasserstein distance to a Gaussian, and, as a byproduct, we obtain the first explicit bounds for the Hellinger CLT.
+              </p>
+              </div>
+              <p />
+        </li>
+        <li><b>Weighted Meta-Learning. (<a href="https://arxiv.org/pdf/2003.09465.pdf">arxiv</a>)</b>
+          <br /><i>Diana Cai, Rishit Sheth, Lester Mackey, and Nicolo Fusi.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#alphamaml">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="alphamaml" class="collapse">
+              <p></p>
+              <p>
+    Meta-learning leverages related source tasks to learn an initialization that can be quickly fine-tuned to a target task with limited labeled examples. However, many popular meta-learning algorithms, such as model-agnostic meta-learning (MAML), only assume access to the target samples for fine-tuning. In this work, we provide a general framework for meta-learning based on weighting the loss of different source tasks, where the weights are allowed to depend on the target samples. In this general setting, we provide upper bounds on the distance of the weighted empirical risk of the source tasks and expected target risk in terms of an integral probability metric (IPM) and Rademacher complexity, which apply to a number of meta-learning settings including MAML and a weighted MAML variant. We then develop a learning algorithm based on minimizing the error bound with respect to an empirical IPM, including a weighted MAML algorithm, &alpha;-MAML. Finally, we demonstrate empirically on several regression problems that our weighted meta-learning algorithm is able to find better initializations than uniformly-weighted meta-learning algorithms, such as MAML.
+              </p>
+              </div>
+              <p />
+        </li>
+        <li><b>Teacher-Student Compression with Generative Adversarial Networks. (<a href="https://arxiv.org/pdf/1812.02271.pdf">arxiv</a>, <a href="https://github.com/RuishanLiu/GAN-TSC">GAN-TSC code</a>, <a href="https://github.com/RuishanLiu/GAN-TSC-Score">TSC Score code</a>)</b>
+          <br /><i>Ruishan Liu, Nicolo Fusi, and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#ganmc">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ganmc" class="collapse">
+              <p></p>
+              <p>
+    More accurate machine learning models often demand more computation and memory at test time, making them difficult to deploy on CPU- or memory-constrained devices. Teacher-student compression (TSC), also known as distillation, alleviates this burden by training a less expensive student model to mimic the expensive teacher model while maintaining most of the original accuracy. However, when fresh data is unavailable for the compression task, the teacher's training data is typically reused, leading to suboptimal compression. In this work, we propose to augment the compression dataset with synthetic data from a generative adversarial network (GAN) designed to approximate the training data distribution. Our GAN-assisted TSC (GAN-TSC) significantly improves student accuracy for expensive models such as large random forests and deep neural networks on both tabular and image datasets. Building on these results, we propose a comprehensive metric---the TSC Score---to evaluate the quality of synthetic datasets based on their induced TSC performance. The TSC Score captures both data diversity and class affinity, and we illustrate its benefits over the popular Inception Score in the context of image classification.
+  </p>
+              </div>
+              <p />
+        </li>
+	    </ul>
+	  </div>
+	  <div class="divider1"></div>
+	  <h4>Publications</h4> 
+	  <div class="contentarea">
+	    <ul class="normal">
+        <li><b>It's Hard to Be Normal: The Impact of Noise on Structure-agnostic Estimation.  (<a href="https://arxiv.org/pdf/2507.02275">arxiv</a>, <a href="https://github.com/JikaiJin/ACE">code</a>)</b>
+          <br /><i>Jikai Jin, Lester Mackey, and Vasilis Syrgkanis.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2025.
+          <br/><a class="btn" data-toggle="collapse" data-target="#ace">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ace" class="collapse">
+              <p></p>
+              <p>
+              Structure-agnostic causal inference studies how well one can estimate a treatment effect given black-box machine learning estimates of nuisance functions (like the impact of confounders on treatment and outcomes). Here, we find that the answer depends in a surprising way on the distribution of the treatment noise. Focusing on the partially linear model of Robinson (1988), we first show that the widely adopted double machine learning (DML) estimator is minimax rate-optimal for Gaussian treatment noise, resolving an open problem of Mackey et al. (2018). Meanwhile, for independent non-Gaussian treatment noise, we show that DML is always suboptimal by constructing new practical procedures with higher-order robustness to nuisance errors. These ACE procedures use structure-agnostic cumulant estimators to achieve r-th order insensitivity to nuisance errors whenever the (r+1)-st treatment cumulant is non-zero. We complement these core results with novel minimax guarantees for binary treatments in the partially linear model. Finally, using synthetic demand estimation experiments, we demonstrate the practical benefits of our higher-order robust estimators.
+              </p>
+              </div>
+        <p />
+        </li>
+        <li><b>Informed Correctors for Discrete Diffusion Models.  (<a href="https://arxiv.org/pdf/2407.21243.pdf">arxiv</a>, <a href="https://github.com/lindermanlab/informed-correctors">code</a>)</b>
+          <br /><i>Yixiu Zhao, Jiaxin Shi, Feng Chen, Shaul Druckmann, Lester Mackey, and Scott Linderman.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2025.
+          <br/><a class="btn" data-toggle="collapse" data-target="#informed">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="informed" class="collapse">
+              <p></p>
+              <p>
+                Discrete diffusion has emerged as a powerful framework for generative modeling in discrete domains, yet efficiently sampling from these models remains challenging. Existing sampling strategies often struggle to balance computation and sample quality when the number of sampling steps is reduced, even when the model has learned the data distribution well. To address these limitations, we propose a predictor-corrector sampling scheme where the corrector is informed by the diffusion model to more reliably counter the accumulating approximation errors. To further enhance the effectiveness of our informed corrector, we introduce complementary architectural modifications based on hollow transformers and a simple tailored training objective that leverages more training signal. We use a synthetic example to illustrate the failure modes of existing samplers and show how informed correctors alleviate these problems. On the text8 and tokenized ImageNet 256x256 datasets, our informed corrector consistently produces superior samples with fewer errors or improved FID scores for discrete diffusion models. These results underscore the potential of informed correctors for fast and high-fidelity generation using discrete diffusion.
+              </p>
+              </div>
+        <p />
+        </li>
+        <li><b>Controlling Moments with Kernel Stein Discrepancies.  (<a href="https://arxiv.org/pdf/2211.05408.pdf">arxiv</a>, <a href="https://github.com/noukoudashisoup/ksd-moment">code</a>)</b>
+          <br /><i>Heishiro Kanagawa, Alessandro Barp, Arthur Gretton, and Lester Mackey.</i>
+          <br />Annals of Applied Probability. To appear.
+          <br/><a class="btn" data-toggle="collapse" data-target="#ksdmoment">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ksdmoment" class="collapse">
+              <p></p>
+              <p>
+              Kernel Stein discrepancies (KSDs) measure the quality of a distributional approximation and can be computed even when the target density has an intractable normalizing constant. Notable applications include the diagnosis of approximate MCMC samplers and goodness-of-fit tests for unnormalized statistical models. The present work analyzes the convergence control properties of KSDs. We first show that standard KSDs used for weak convergence control fail to control moment convergence. To address this limitation, we next provide sufficient conditions under which alternative diffusion KSDs control both moment and weak convergence. As an immediate consequence we develop, for each q>0, the first KSDs known to exactly characterize q-Wasserstein convergence.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Low-Rank Thinning.  (<a href="https://arxiv.org/pdf/2502.12063">arxiv</a>, <a href="https://github.com/microsoft/thinformer">thinformer</a>, <a href="https://github.com/microsoft/khsgd">khsgd</a>, <a href="https://github.com/microsoft/deepctt">deepctt</a>)</b>
+          <br /><i>Annabelle Michael Carrell, Albert Gong, Abhishek Shetty, Raaz Dwivedi, and Lester Mackey.</i>
+          <br />International Conference on Machine Learning (ICML). July 2025.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#thinformer">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="thinformer" class="collapse">
+              <p></p>
+              <p>
+              The goal in thinning is to summarize a dataset using a small set of representative points. Remarkably, sub-Gaussian thinning algorithms like Kernel Halving and Compress can match the quality of uniform subsampling while substantially reducing the number of summary points. However, existing guarantees cover only a restricted range of distributions and kernel-based quality measures and suffer from pessimistic dimension dependence. To address these deficiencies, we introduce a new low-rank analysis of sub-Gaussian thinning that applies to any distribution and any kernel, guaranteeing high-quality compression whenever the kernel or data matrix is approximately low-rank. To demonstrate the broad applicability of the techniques, we design practical sub-Gaussian thinning approaches that improve upon the best known guarantees for approximating attention in transformers, accelerating stochastic gradient training through reordering, and distinguishing distributions in near-linear time.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>SatCLIP: Global, General-Purpose Location Embeddings with Satellite Imagery.  (<a href="https://arxiv.org/pdf/2311.17179.pdf">arxiv</a>, <a href="https://github.com/microsoft/satclip">code</a>)</b>
+          <br /><i>Konstantin Klemmer, Esther Rolf, Caleb Robinson, Lester Mackey, and Marc Ru&#223;wurm.</i>
+          <br />AAAI Conference on Artificial Intelligence (AAAI). February 2025.
+          <br/><a class="btn" data-toggle="collapse" data-target="#satclip">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="satclip" class="collapse">
+              <p></p>
+              <p>
+                Geographic information is essential for modeling tasks in fields ranging from ecology to epidemiology. However, extracting relevant location characteristics for a given task can be challenging, often requiring expensive data fusion or distillation from massive global imagery datasets. To address this challenge, we introduce Satellite Contrastive Location-Image Pretraining (SatCLIP). This global, general-purpose geographic location encoder learns an implicit representation of locations by matching CNN and ViT inferred visual patterns of openly available satellite imagery with their geographic coordinates. The resulting SatCLIP location encoder efficiently summarizes the characteristics of any given location for convenient use in downstream tasks. In our experiments, we use SatCLIP embeddings to improve prediction performance on nine diverse location-dependent tasks including temperature prediction, animal recognition, and population density estimation. Across tasks, SatCLIP consistently outperforms alternative location encoders and improves geographic generalization by encoding visual similarities of spatially distant environments. These results demonstrate the potential of vision-location models to learn meaningful representations of our planet from the vast, varied, and largely untapped modalities of geospatial data.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>SureMap: Simultaneous mean estimation for single-task and multi-task disaggregated evaluation. (<a href="https://arxiv.org/pdf/2411.09730">arxiv</a>, <a href="https://github.com/mkhodak/SureMap">code</a>)</b>
+          <br /><i>Mikhail Khodak, Lester Mackey, Alexandra Chouldechova, and Miroslav Dudik.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2024.
+          <br/><a class="btn" data-toggle="collapse" data-target="#suremap">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="suremap" class="collapse">
+              <p></p>
+              <p>
+                Disaggregated evaluation---estimation of performance of a machine learning model on different subpopulations---is a core task when assessing performance and group-fairness of AI systems. A key challenge is that evaluation data is scarce, and subpopulations arising from intersections of attributes (e.g., race, sex, age) are often tiny. Today, it is common for multiple clients to procure the same AI model from a model developer, and the task of disaggregated evaluation is faced by each customer individually.  This gives rise to what we call the multi-task disaggregated evaluation problem, wherein multiple clients seek to conduct a disaggregated evaluation of a given model in their own data setting (task).  In this work we develop a disaggregated evaluation method called SureMap that has high estimation accuracy for both multi-task and single-task disaggregated evaluations of blackbox models.  SureMap's efficiency gains come from (1) transforming the problem into structured simultaneous Gaussian mean estimation and (2) incorporating external data, e.g., from the AI system creator or from their other clients.  Our method combines maximum a posteriori (MAP) estimation using a well-chosen prior together with cross-validation-free tuning via Stein's unbiased risk estimate (SURE).	We evaluate SureMap on disaggregated evaluation tasks in multiple domains, observing significant accuracy improvements over several strong competitors.          </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Near-optimal inference in adaptive linear regression. (<a href="https://arxiv.org/pdf/2107.02266.pdf">arxiv</a>, <a href="https://github.com/KoulikBerkeley/online-debiasing/">code</a>)</b>
+          <br /><i>Koulik Khamaru, Yash Deshpande, Lester Mackey, and Martin J. Wainwright.</i>
+          <br />Annals of Statistics. To appear.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#onlinedebias">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="onlinedebias" class="collapse">
+              <p></p>
+              <p>
+              When data is collected in an adaptive manner, even simple methods likeordinary  least  squares  can  exhibit  non-normal  asymptotic  behavior.  As  anundesirable consequence, hypothesis tests and confidence intervals based on asymptotic normality can lead to erroneous results. We propose a family ofonline debiasing estimators to correct these distributional anomalies in least squares estimation. Our proposed methods take advantage of the covariance structure present in the dataset and provide sharper estimates in directions for which more information has accrued. We establish an asymptotic normality property for our proposed online debiasing estimators under mild conditions on the data collection process and provide asymptotically exact confidence intervals. We additionally prove a minimax lower bound for the adaptive linear regression problem, thereby providing a baseline by which to compare estimators. There are various conditions under which our proposed estimators achieve the minimax lower bounds up to logarithmic factors. We demonstrate the usefulness of our theory via applications to multi-armed bandit, autoregressive time series estimation, and active learning with exploration.
+          </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation.  (<a href="https://arxiv.org/pdf/2310.02304.pdf">arxiv</a>, <a href="https://github.com/microsoft/stop">code</a>)</b>
+          <br /><i>Eric Zelikman, Eliana Lorch, Lester Mackey, and Adam Tauman Kalai.</i>
+          <br />Conference on Language Models (COLM). October 2024.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#stop">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="stop" class="collapse">
+              <p></p>
+              <p>
+                Several recent advances in AI systems solve problems by providing a
+                "scaffolding" program that structures multiple calls to language models (LMs)
+                to generate better outputs. A scaffolding program is written in a programming
+                language such as Python. In this work, we use a language-model-infused
+                scaffolding program to improve itself. We start with a seed "improver" that
+                improves an input program according to a given utility function by querying an
+                LM several times and returning the best solution. We then run this seed
+                improver to improve itself. Across a small set of downstream tasks, the
+                resulting improved improver generates programs with significantly better
+                performance than its seed improver. A variety of self-improvement strategies
+                are proposed by the language model, including beam search, genetic algorithms,
+                and simulated annealing. Since the language models themselves are not altered,
+                this is not full recursive self-improvement. Nonetheless, it demonstrates that
+                a modern language model, GPT-4 in our experiments, is capable of writing code
+                that can call itself to improve itself. We consider concerns around the
+                development of self-improving technologies and evaluate the frequency with
+                which the generated code bypasses a sandbox.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Debiased Distribution Compression. (<a href="https://arxiv.org/pdf/2404.12290.pdf">arxiv</a>, <a href="https://github.com/microsoft/goodpoints">code</a>)</b>
+          <br /><i>Lingxiao Li, Raaz Dwivedi, and Lester Mackey.</i>
+          <br />International Conference on Machine Learning (ICML). July 2024.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#ddc">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ddc" class="collapse">
+              <p></p>
+              <p>
+                Modern compression methods can summarize a target distribution P more succinctly than i.i.d. sampling but require access to a low-bias input sequence like a Markov chain converging quickly to P. We introduce a new suite of compression methods suitable for compression with biased input sequences. Given n points targeting the wrong distribution and quadratic time, Stein Kernel Thinning (SKT) returns sqrt(n) equal-weighted points with &#213;(1/sqrt(n)) maximum mean discrepancy (MMD) to P. For larger-scale compression tasks, Low-rank SKT achieves the same feat in sub-quadratic time using an adaptive low-rank debiasing procedure that may be of independent interest. For downstream tasks that support simplex or constant-preserving weights, Stein Recombination and Stein Cholesky achieve even greater parsimony, matching the guarantees of SKT with as few as poly-log(n) weighted points. Underlying these advances are new guarantees for the quality of simplex-weighted coresets, the spectral decay of kernel matrices, and the covering numbers of Stein kernel Hilbert spaces. In our experiments, our techniques provide succinct and accurate posterior summaries while overcoming biases due to burn-in, approximate Markov chain Monte Carlo, and tempering.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Kernel Thinning. (<a href="https://arxiv.org/pdf/2105.05842.pdf">arxiv</a>, <a href="https://github.com/microsoft/goodpoints">code</a>, <a href="papers/thinning-slides.pdf">slides</a>)</b>
+          <br /><i>Raaz Dwivedi and Lester Mackey.</i>
+          <br />Journal of Machine Learning Research (JMLR). June 2024.
+          <br/><a class="btn" data-toggle="collapse" data-target="#kernelthinning">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="kernelthinning" class="collapse">
+              <p></p>
+              <p>
+              We introduce kernel thinning, a new procedure for compressing a distribution P more effectively than i.i.d. sampling or standard thinning.
+              Given a suitable reproducing kernel k and O(n^2) time, kernel thinning compresses an n-point approximation to P into a sqrt(n)-point approximation with comparable worst-case integration error across the associated reproducing kernel Hilbert space.
+              With high probability, the maximum discrepancy in integration error is O_d(n^{-1/2} sqrt(log n)) for compactly supported P and O_d(n^{-1/2} sqrt((log n)^{d+1} log log n)) for sub-exponential P on R^d.
+              In contrast, an equal-sized i.i.d. sample from P suffers Omega(n^{-1/4}) integration error.
+              Our sub-exponential guarantees resemble
+              the classical quasi-Monte Carlo error rates for uniform P on [0,1]^d but apply to general distributions on R^d
+              and a wide range of common kernels.
+              We use our results to derive explicit non-asymptotic maximum mean discrepancy bounds for Gaussian, Matern, and B-spline kernels
+              and present two vignettes illustrating the practical benefits of kernel thinning over i.i.d. sampling and standard Markov chain Monte Carlo thinning, in dimensions d=2 through 100.
+          </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Targeted Separation and Convergence with Kernel Discrepancies.  (<a href="https://arxiv.org/pdf/2209.12835.pdf">arxiv</a>)</b>
+          <br /><i>Alessandro Barp, Carl-Johann Simon-Gabriel, Mark Girolami, and Lester Mackey.</i>
+          <br />Journal of Machine Learning Research (JMLR). To appear.
+          <br/><a class="btn" data-toggle="collapse" data-target="#mmdksd">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="mmdksd" class="collapse">
+              <p></p>
+              <p>
+                Maximum mean discrepancies (MMDs) like the kernel Stein discrepancy (KSD) have grown central to a wide range of applications, including hypothesis testing, sampler selection, distribution approximation, and variational inference. In each setting, these kernel-based discrepancy measures are required to (i) separate a target P from other probability measures or even (ii) control weak convergence to P. In this article we derive new sufficient and necessary conditions to ensure (i) and (ii). For MMDs on separable metric spaces, we characterize those kernels that separate Bochner embeddable measures and introduce simple conditions for separating all measures with unbounded kernels and for controlling convergence with bounded kernels. We use these results on R^d to substantially broaden the known conditions for KSD separation and convergence control and to develop the first KSDs known to exactly metrize weak convergence to P. Along the way, we highlight the implications of our results for hypothesis testing, measuring and improving sample quality, and sampling with Stein variational gradient descent.
+          </p>
+        </div>
+        <p />
+        </li>
+        <li><b> Do Language Models Know When They're Hallucinating References?  (<a href="https://arxiv.org/pdf/2305.18248.pdf">arxiv</a>, <a href="https://github.com/microsoft/hallucinated-references">code</a>)</b>
+          <br /><i>Ayush Agrawal, Mirac Suzgun, Lester Mackey, and Adam Tauman Kalai.</i>
+          <br />Findings of the Association for Computational Linguistics: EACL. Mar. 2024.
+          <br/><a class="btn" data-toggle="collapse" data-target="#llmref">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="llmref" class="collapse">
+              <p></p>
+              <p>
+                State-of-the-art language models (LMs) are notoriously susceptible to generating hallucinated information. Such inaccurate outputs not only undermine the reliability of these models but also limit their use and raise serious concerns about misinformation and propaganda. In this work, we focus on hallucinated book and article references and present them as the "model organism" of language model hallucination research, due to their frequent and easy-to-discern nature. We posit that if a language model cites a particular reference in its output, then it should ideally possess sufficient information about its authors and content, among other relevant details. Using this basic insight, we illustrate that one can identify hallucinated references without ever consulting any external resources, by asking a set of direct or indirect queries to the language model about the references. These queries can be considered as "consistency checks." Our findings highlight that while LMs, including GPT-4, often produce inconsistent author lists for hallucinated references, they also often accurately recall the authors of real references. In this sense, the LM can be said to "know" when it is hallucinating references. Furthermore, these findings show how hallucinated references can be dissected to shed light on their nature. 
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>SubseasonalClimateUSA: A Dataset for Subseasonal Forecasting and Benchmarking.  (<a href="https://arxiv.org/pdf/2109.10399.pdf">arxiv</a>, <a href="https://github.com/microsoft/subseasonal_toolkit">code</a>, <a href="https://github.com/microsoft/subseasonal_data">SubseasonalClimateUSA dataset</a>, <a href="https://communities.springernature.com/posts/improving-subseasonal-forecasting-with-machine-learning">blog</a>, <a href="https://www.microsoft.com/en-us/research/project/subseasonal-climate-forecasting/">website</a>)</b>
+          <br /><i>Soukayna Mouatadid, Paulo Orenstein, Genevieve Flaspohler, Miruna
+              Oprescu, Judah Cohen, Franklyn Wang, Sean Knight, Maria Geogdzhayeva, Sam Levang, Ernest Fraenkel, and Lester Mackey.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#subseasonalusa">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="subseasonalusa" class="collapse">
+              <p></p>
+              <p>
+                Subseasonal forecasting of the weather two to six weeks in advance is critical for resource allocation and advance disaster notice but poses many challenges for the forecasting community. 
+                At this forecast horizon, physics-based dynamical models have limited skill, and the targets for prediction depend in a complex manner on both local weather and global climate variables. 
+                Recently, machine learning methods have shown promise in advancing the state of the art but  only at the cost of complex data curation, integrating expert knowledge with aggregation across multiple relevant data sources, file formats, and temporal and spatial resolutions.
+                To streamline this process and accelerate future development, we introduce SubseasonalClimateUSA, a curated dataset for training and benchmarking subseasonal forecasting models in the United States. 
+                We use this dataset to benchmark a diverse suite of subseasonal models, 
+                including operational dynamical models, classical meteorological baselines, and ten state-of-the-art machine learning and deep learning-based methods from the literature. 
+                Overall, our benchmarks suggest simple and effective ways to extend the accuracy of current operational models. 
+                SubseasonalClimateUSA is regularly updated and accessible via the <a href="https://github.com/microsoft/subseasonal_data/">https://github.com/microsoft/subseasonal_data/</a> Python package. 
+          </p>
+              </div>
+              <p />
+        </li>
+        <li><b> Should I Stop or Should I Go: Early Stopping with Heterogeneous Populations.  (<a href="https://arxiv.org/pdf/2306.11839.pdf">arxiv</a>, <a href="https://github.com/hammaadadam1/clash">code</a>)</b>
+          <br /><i>Hammaad Adam, Fan Yin, Mary Hu, Neil Tenenholtz, Lorin Crawford, Lester Mackey, and Allison Koenecke.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#clash">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="clash" class="collapse">
+              <p></p>
+              <p>
+                Randomized experiments often need to be stopped prematurely due to the treatment
+                having an unintended harmful effect. Existing methods that determine when to
+                stop an experiment early are typically applied to the data in aggregate and do
+                not account for treatment effect heterogeneity. In this paper, we study the early
+                stopping of experiments for harm on heterogeneous populations. We first establish
+                that current methods often fail to stop experiments when the treatment harms a
+                minority group of participants. We then use causal machine learning to develop
+                CLASH, the first broadly-applicable method for heterogeneous early stopping. We
+                demonstrate CLASH's performance on simulated and real data and show that it
+                yields effective early stopping for both clinical trials and A/B tests.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Learning Rate Free Sampling in Constrained Domains.  (<a href="https://arxiv.org/pdf/2305.14943.pdf">arxiv</a>, <a href="https://github.com/louissharrock/constrained-coin-sampling">code</a>)</b>
+          <br /><i>Louis Sharrock, Lester Mackey, and Christopher Nemeth.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#coinmsvgd">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="coinmsvgd" class="collapse">
+              <p></p>
+              <p>
+                We introduce a suite of new particle-based algorithms for sampling in constrained domains which are entirely learning rate free. Our approach leverages coin betting ideas from convex optimisation, and the viewpoint of constrained sampling as a mirrored optimisation problem on the space of probability measures. Based on this viewpoint, we also introduce a unifying framework for several existing constrained sampling algorithms, including mirrored Langevin dynamics and mirrored Stein variational gradient descent. We demonstrate the performance of our algorithms on a range of numerical examples, including sampling from targets on the simplex, sampling with fairness constraints, and constrained sampling problems in post-selection inference. Our results indicate that our algorithms achieve competitive performance with existing constrained sampling methods, without the need to tune any hyperparameters.
+              </p>
+        </div>
+        <p />
+        </li>        
+        <li><b> A Finite-Particle Convergence Rate for Stein Variational Gradient
+          Descent.  (<a href="https://arxiv.org/pdf/2211.09721.pdf">arxiv</a>)</b>
+          <br /><i>Jiaxin Shi and Lester Mackey.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#svgdrate">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="svgdrate" class="collapse">
+              <p></p>
+              <p>
+                We provide a first finite-particle convergence rate for Stein variational
+                gradient descent (SVGD). Specifically, whenever the target distribution 
+                is sub-Gaussian with a Lipschitz score, SVGD with n particles and an appropriate
+                step size sequence drives the kernel Stein discrepancy to zero at an order
+                1/sqrt(log log n) rate. We suspect that the dependence on n can be improved,
+                and we hope that our explicit, non-asymptotic proof strategy will serve as a
+                template for future refinements.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Bounding Wasserstein distance with couplings. (<a href="https://arxiv.org/pdf/2112.03152.pdf">arxiv</a>, <a href="https://github.com/niloyb/BoundWasserstein">code</a>, <a href="papers/cub-neurips2021-poster.pdf">poster</a>)</b>
+          <br /><i>Niloy Biswas and Lester Mackey.</i>
+          <br />Journal of the American Statistical Association (JASA). November 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#cub">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="cub" class="collapse">
+              <p></p>
+              <p>
+                Markov chain Monte Carlo (MCMC) provides asymptotically consistent estimates of 
+                intractable posterior expectations as the number of iterations tends to infinity. 
+                However, in large data applications, MCMC can be computationally expensive per iteration. 
+                This has catalyzed interest in approximating MCMC in a manner that improves computational speed per iteration 
+                but does not produce asymptotically consistent estimates.
+                In this article, we propose estimators based on couplings of Markov chains to assess the 
+                quality of such asymptotically biased sampling methods. The estimators give empirical upper 
+                bounds of the Wasserstein distance between the limiting distribution of the asymptotically 
+                biased sampling method and the original target distribution of interest. 
+                We establish theoretical guarantees for our upper bounds and show that our estimators 
+                can remain effective in high dimensions. 
+                We apply our quality measures to stochastic gradient MCMC, variational Bayes, 
+                and Laplace approximations for tall data and to approximate MCMC for Bayesian logistic regression in 4500 dimensions and Bayesian linear regression in 50000 dimensions. 
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b> Evaluation of Dependency Structure for Multivariate Weather Predictors using Copulas.  (<a href="https://arxiv.org/pdf/2211.09721.pdf">arxiv</a>, <a href="https://github.com/SamChege/Vine-Copulas-Weather-Dependency">code</a>)</b>
+          <br /><i>Samuel C. Maina, Dorcas Mwigereri, Jonathan Weyn, Lester Mackey, and Millicent Ochieng.</i>
+          <br />ACM Journal on Computing and Sustainable Societies (COMPASS).  September 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#copulas">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="copulas" class="collapse">
+              <p></p>
+              <p>
+              In the Global South, the effects of climate change have resulted in more frequent and severe weather events such as droughts, floods, and storms, leading to crop failures, food insecurity, and job loss. These effects are expected to increase in intensity in the future, further disadvantaging already marginalized communities and exacerbating existing inequalities. Hence the need for prevention and adaptation is urgent, but accurate weather forecasting remains challenging, despite advances in machine learning and numerical modeling, due to complex interaction of atmospheric and oceanic variables. This research aims to explore the potential of vine copulas in explaining complex relationships of different weather variables in three African locations. Copulas separate marginal distributions from the dependency structure, offering a flexible way to model dependence between random variables for improved risk assessments and simulations. Vine copulas are based on a variety of bivariate copulas, including Gaussian, Student's t, Clayton, Gumbel, and Frank copulas, and they are effective in high-dimensional problems and offer a hierarchy of trees to express conditional dependence. In addition, we propose how this framework can be applied within the subseasonal forecasting models to enhance the prediction of different weather events or variables.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Adaptive Bias Correction for Improved Subseasonal Forecasting.  (<a href="https://arxiv.org/pdf/2209.10666.pdf">arxiv</a>, <a href="https://github.com/microsoft/subseasonal_toolkit">code</a>, <a href="https://communities.springernature.com/posts/improving-subseasonal-forecasting-with-machine-learning">blog</a>, <a href="https://www.microsoft.com/en-us/research/project/subseasonal-climate-forecasting/">website</a>)</b>
+          <br /><i>Soukayna Mouatadid, Paulo Orenstein, Genevieve Flaspohler, Judah Cohen, Miruna Oprescu, Ernest Fraenkel, and Lester Mackey.</i>
+          <br />Nature Communications. June 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#abc">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="abc" class="collapse">
+              <p></p>
+              <p>
+                Subseasonal forecasting---predicting temperature and precipitation 2 to 6 weeks ahead---is critical for effective water allocation, wildfire management, and drought and flood mitigation. 
+                Recent international research efforts have advanced the subseasonal capabilities of operational dynamical models, yet temperature and precipitation prediction skills remain poor, 
+                partly due to stubborn errors in representing atmospheric dynamics and physics inside dynamical models.
+                To counter these errors, we introduce an adaptive bias correction (ABC) method that combines state-of-the-art dynamical forecasts with observations using machine learning.
+                We show that, when applied to the leading subseasonal model from the European Centre for Medium-Range Weather Forecasts (ECMWF), ABC improves temperature forecasting skill by 60-90% (over baseline skills of 0.18-0.25) and precipitation forecasting skill by 40-69% (over baseline skills of 0.11-0.15) in the contiguous U.S. 
+                We couple these performance improvements with a practical workflow for explaining ABC skill gains and identifying higher-skill windows of opportunity based on specific climate conditions.              
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>A Kernel Stein Test for Comparing Latent Variable Models. (<a href="https://arxiv.org/pdf/1907.00586.pdf">arxiv</a>, <a href="https://github.com/noukoudashisoup/lkgof">code</a>)</b>
+          <br /><i>Heishiro Kanagawa, Wittawat Jitkrittum, Lester Mackey, Kenji Fukumizu, and Arthur Gretton.</i>
+          <br />Journal of the Royal Statistical Society, Series B (JRSSB). May 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#latentstein">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="latentstein" class="collapse">
+              <p></p>
+              <p>
+                We propose a kernel-based nonparametric test of relative goodness of fit, where the goal is to compare two models, both of which may have unobserved latent variables, such that the marginal distribution of the observed variables is intractable. The proposed test generalizes the recently proposed kernel Stein discrepancy (KSD) tests 
+                (Liu et al., 2016; Chwialkowski et al., 2016; Yang et al., 2018) to the case of latent variable models, a much more general class than the fully observed models treated previously. The new test, with a properly calibrated threshold, has a well-controlled type-I error. In the case of certain models with low-dimensional latent structures and high-dimensional observations, our test significantly outperforms the relative maximum mean discrepancy test, which is based on samples from the models and does not exploit the latent structure.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Independent finite approximations for Bayesian nonparametric inference. (<a href="https://arxiv.org/pdf/2009.10780.pdf">arxiv</a>)</b>
+          <br /><i>Tin D. Nguyen, Jonathan Huggins, Lorenzo Masoero, Lester Mackey, and Tamara Broderick.</i>
+          <br />Bayesian Analysis. May 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#ifa">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ifa" class="collapse">
+              <p></p>
+              <p>
+              Bayesian nonparametric priors based on completely random measures (CRMs) offer a flexible modeling approach when the number of latent components in a dataset is unknown. However, managing the infinite dimensionality of CRMs typically requires practitioners to derive ad-hoc algorithms, preventing the use of general-purpose inference methods and often leading to long compute times. We propose a general but explicit recipe to construct a simple finite-dimensional approximation that can replace the infinite-dimensional CRMs. Our independent finite approximation (IFA) is a generalization of important cases that are used in practice. The independence of atom weights in our approximation (i) makes the construction well-suited for parallel and distributed computation and (ii) facilitates more convenient inference schemes. We quantify the approximation error between IFAs and the target nonparametric prior. We compare IFAs with an alternative approximation scheme -- truncated finite approximations (TFAs), where the atom weights are constructed sequentially. We prove that, for worst-case choices of observation likelihoods, TFAs are a more efficient approximation than IFAs. However, in real-data experiments with image denoising and topic modeling, we find that IFAs perform very similarly to TFAs in terms of task-specific accuracy metrics.
+          </p>
+              </div>
+              <p />
+              </li>
+        <li><b> Compress Then Test: Powerful Kernel Testing in Near-linear Time.  (<a href="https://arxiv.org/pdf/2301.05974.pdf">arxiv</a>, <a href="https://github.com/microsoft/goodpoints">code</a>)</b>
+          <br /><i>Carles Domingo-Enrich, Raaz Dwivedi, and Lester Mackey.</i>
+          <br />International Conference on Artificial Intelligence and Statistics (AISTATS). April 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#ctt">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ctt" class="collapse">
+              <p></p>
+              <p>
+                Kernel two-sample testing provides a powerful framework for distinguishing any pair of distributions based on $n$ sample points. 
+                However, existing kernel tests either run in $n^2$ time or sacrifice undue power to improve runtime. 
+                To address these shortcomings, we introduce Compress Then Test (CTT), a new framework for high-powered kernel testing based on sample compression. 
+                CTT cheaply approximates an expensive test by compressing each $n$ point sample into a small but provably high-fidelity coreset. 
+                For standard kernels and subexponential distributions, CTT inherits the statistical behavior of a quadratic-time test---recovering the same optimal detection boundary---while running in near-linear time. 
+                We couple these advances with cheaper permutation testing, justified by new power analyses; 
+                improved time-vs.-quality guarantees for low-rank approximation; 
+                and a fast aggregation procedure for identifying especially discriminating kernels. 
+                In our experiments with real and simulated data, CTT and its extensions provide 20--200x speed-ups over state-of-the-art approximate MMD tests with no loss of power.
+              </p>
+        </div>
+        <p />
+        </li>
+        <li><b>Metrizing Weak Convergence with Maximum Mean Discrepancies. (<a href="https://arxiv.org/pdf/2006.09268.pdf">arxiv</a>)</b>
+          <br /><i>Carl-Johann Simon-Gabriel, Alessandro Barp, Bernhard Sch&#246;lkopf, and Lester Mackey.</i>
+          <br />Journal of Machine Learning Research (JMLR). To appear.
+          <br/><a class="btn" data-toggle="collapse" data-target="#weakmmd">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="weakmmd" class="collapse">
+              <p></p>
+              <p>
+    Theorem 12 of Simon-Gabriel and Scholkopf (JMLR, 2018) seemed to close a 40-year-old quest to characterize maximum mean discrepancies (MMD) that metrize the weak convergence of probability measures. We prove, however, that the theorem is incorrect and provide a correction. We show that, on a locally compact, non-compact, Hausdorff space, the MMD of a bounded continuous Borel measurable kernel k, whose RKHS-functions vanish at infinity, metrizes the weak convergence of probability measures if and only if k is continuous and integrally strictly positive definite (ISPD) over all signed, finite, regular Borel measures. We also show that, contrary to the claim of the aforementioned Theorem 12, there exist both bounded continuous ISPD kernels that do not metrize weak convergence and bounded continuous non-ISPD kernels that do metrize it.
+        </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Social Norm Bias: Residual Harms of Fairness-Aware Algorithms.  (<a href="https://arxiv.org/pdf/2108.11056.pdf">arxiv</a>)</b>
+          <br /><i>Myra Cheng, Maria De-Arteaga, Lester Mackey, and Adam Tauman Kalai.</i>
+          <br />WIREs Data Mining and Knowledge Discovery. January 2023.
+          <br/><a class="btn" data-toggle="collapse" data-target="#snob">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="snob" class="collapse">
+              <p></p>
+              <p>
+              Many modern learning algorithms mitigate bias by enforcing fairness across coarsely-defined groups related to a sensitive attribute like gender or race. However, the same algorithms seldom account for the within-group biases that arise due to the heterogeneity of group members. In this work, we characterize Social Norm Bias (SNoB), a subtle but consequential type of discrimination that may be exhibited by automated decision-making systems, even when these systems achieve group fairness objectives. We study this issue through the lens of gender bias in occupation classification from biographies. We quantify SNoB by measuring how an algorithm's predictions are associated with conformity to gender norms, which is measured using a machine learning approach. This framework reveals that for classification tasks related to male-dominated occupations, fairness-aware classifiers favor biographies written in ways that align with masculine gender norms. We compare SNoB across fairness intervention techniques and show that post-processing interventions do not mitigate this type of bias at all.
+          </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Gradient Estimation with Discrete Stein Operators. (<a href="https://arxiv.org/pdf/2202.09497.pdf">arxiv</a>, <a href="https://github.com/thjashin/rodeo">code</a>)</b>
+          <br /><i>Jiaxin Shi, Yuhao Zhou, Jessica Hwang, Michalis K. Titsias, and Lester Mackey.</i>
+          <br />Advances in Neural Processing Systems (NeurIPS). December 2022.
+          <br /><small><b>NeurIPS 2022 Outstanding Paper Award.</b></small>
+          <br/><a class="btn" data-toggle="collapse" data-target="#rodeo">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="rodeo" class="collapse">
+              <p></p>
+              <p>
+  Gradient estimation -- approximating the gradient of an expectation with
+  respect to the parameters of a distribution -- is central to the solution of
+  many machine learning problems. However, when the distribution is discrete,
+  most common gradient estimators suffer from excessive variance. To improve the
+  quality of gradient estimation, we introduce a variance reduction technique
+  based on Stein operators for discrete distributions. We then use this technique
+  to build flexible control variates for the REINFORCE leave-one-out estimator.
+  Our control variates can be adapted online to minimize the variance and do not
+  require extra evaluations of the target function. In benchmark generative
+  modeling tasks such as training binary variational autoencoders, our gradient
+  estimator achieves substantially lower variance than state-of-the-art
+  estimators with the same number of function evaluations.
+              </p>
+              </div>
+              <p />
+              </li>
+            <li><b>Scalable Spike-and-Slab. (<a href="https://arxiv.org/pdf/2204.01668.pdf">arxiv</a>, <a href="https://github.com/niloyb/ScaleSpikeSlab">code</a>)</b>
+              <br /><i>Niloy Biswas, Lester Mackey, and Xiao-Li Meng.</i>
+	      <br />International Conference on Machine Learning (ICML). July 2022.
+                <br/><a class="btn" data-toggle="collapse" data-target="#s3">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="s3" class="collapse">
+                    <p></p>
+                    <p>
+		    Spike-and-slab priors are commonly used for Bayesian variable selection, due to their interpretability and favorable statistical properties. However, existing samplers for spike-and-slab posteriors incur prohibitive computational costs when the number of variables is large. In this article, we propose Scalable Spike-and-Slab (S^3), a scalable Gibbs sampling implementation for high-dimensional Bayesian regression with the continuous spike-and-slab prior of George and McCulloch (1993). For a dataset with n observations and p covariates, S^3 has order max(n^2 p_t, np) computational cost at iteration t where p_t never exceeds the number of covariates switching spike-and-slab states between iterations t and t-1 of the Markov chain. This improves upon the order n^2 p per-iteration cost of state-of-the-art implementations as, typically, p_t is substantially smaller than p. We apply S^3 on synthetic and real-world datasets, demonstrating orders of magnitude speed-ups over existing exact samplers and significant gains in inferential quality over approximate samplers with comparable cost.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+	    <li><b>Stein's Method Meets Statistics: A Review of Some Recent Developments. (<a href="https://arxiv.org/pdf/2105.03481.pdf">arxiv</a>)</b>
+              <br /><i>Andreas Anastasiou, Alessandro Barp, Francois-Xavier Briol, Bruno Ebner, Robert E. Gaunt, Fatemeh Ghaderinezhad, Jackson Gorham, Arthur Gretton, Christophe Ley, Qiang Liu, Lester Mackey, Chris. J. Oates, Gesine Reinert, and Yvik Swan.</i>
+	      <br />Statistical Science. February 2023.
+                <br/><a class="btn" data-toggle="collapse" data-target="#steinstat">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="steinstat" class="collapse">
+                    <p></p>
+                    <p>
+		      Stein's method compares probability distributions through the study of a class of linear operators called Stein operators. While mainly studied in probability and used to underpin theoretical statistics, Stein's method has led to significant advances in computational statistics in recent years. The goal of this survey is to bring together some of these recent developments and, in doing so, to stimulate further research into the successful field of Stein's method and statistics. The topics we discuss include tools to benchmark and compare sampling methods such as approximate Markov chain Monte Carlo, deterministic alternatives to sampling methods, control variate techniques, parameter estimation and goodness-of-fit testing.
+                </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Distribution Compression in Near-linear Time. (<a href="https://arxiv.org/pdf/2111.07941.pdf">arxiv</a>, <a href="https://github.com/microsoft/goodpoints">code</a>, <a href="papers/thinning-slides.pdf">slides</a>)</b>
+                <br /><i>Abhishek Shetty, Raaz Dwivedi, and Lester Mackey.</i>
+                <br />International Conference on Learning Representations (ICLR). April 2022.
+                  <br /><small><b>2022 American Statistical Association SCSG Student Paper Award.</b></small>
+                <br/><a class="btn" data-toggle="collapse" data-target="#compress">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="compress" class="collapse">
+                    <p></p>
+                    <p>
+            In distribution compression, one aims to accurately summarize a probability distribution P using a small number of representative points. Near-optimal thinning procedures achieve this goal by sampling n points from a Markov chain and identifying sqrt(n) points with &Otilde(1/sqrt(n)) discrepancy to P. Unfortunately, these algorithms suffer from quadratic or super-quadratic runtime in the sample size n. To address this deficiency, we introduce Compress++, a simple meta-procedure for speeding up any thinning algorithm while suffering at most a factor of 4 in error. When combined with the quadratic-time kernel halving and kernel thinning algorithms of Dwivedi and Mackey (2021), Compress++ delivers sqrt(n) points with O(sqrt(log n/n)) integration error and better-than-Monte-Carlo maximum mean discrepancy in O(n log^3 n) time and O(sqrt(n) log^2 n) space. Moreover, Compress++ enjoys the same near-linear runtime given any quadratic-time input and reduces the runtime of super-quadratic algorithms by a square-root factor. In our benchmarks with high-dimensional Monte Carlo samples and Markov chains targeting challenging differential equation posteriors, Compress++ matches or nearly matches the accuracy of its input algorithm in orders of magnitude less time.
+                </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Generalized Kernel Thinning. (<a href="https://arxiv.org/pdf/2110.01593.pdf">arxiv</a>, <a href="https://github.com/microsoft/goodpoints">code</a>, <a href="papers/thinning-slides.pdf">slides</a>)</b>
+                <br /><i>Raaz Dwivedi and Lester Mackey.</i>
+                <br />International Conference on Learning Representations (ICLR). April 2022.
+                <br/><a class="btn" data-toggle="collapse" data-target="#gkt">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="gkt" class="collapse">
+                    <p></p>
+                    <p>
+            The kernel thinning (KT) algorithm of Dwivedi and Mackey (2021) compresses a probability distribution more effectively than independent sampling by targeting a reproducing kernel Hilbert space (RKHS) and leveraging a less smooth square-root kernel. Here we provide four improvements. First, we show that KT applied directly to the target RKHS yields tighter, dimension-free guarantees for any kernel, any distribution, and any fixed function in the RKHS. Second, we show that, for analytic kernels like Gaussian, inverse multiquadric, and sinc, target KT admits maximum mean discrepancy (MMD) guarantees comparable to or better than those of square-root KT without making explicit use of a square-root kernel. Third, we prove that KT with a fractional power kernel yields better-than-Monte-Carlo MMD guarantees for non-smooth kernels, like Laplace and Matern, that do not have square-roots. Fourth, we establish that KT applied to a sum of the target and power kernels (a procedure we call KT+) simultaneously inherits the improved MMD guarantees of power KT and the tighter individual function guarantees of target KT. In our experiments with target KT and KT+, we witness significant improvements in integration error even in 100 dimensions and when compressing challenging differential equation posteriors.
+                </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Sampling with Mirrored Stein Operators. (<a href="https://arxiv.org/pdf/2106.12506.pdf">arxiv</a>, <a href="https://github.com/thjashin/mirror-stein-samplers">code</a>)</b>
+                <br /><i>Jiaxin Shi, Chang Liu, and Lester Mackey.</i>
+                <br />International Conference on Learning Representations (ICLR). April 2022.
+                <br/><a class="btn" data-toggle="collapse" data-target="#mirrorstein">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="mirrorstein" class="collapse">
+                    <p></p>
+                    <p>
+                    We introduce a new family of particle evolution samplers suitable for constrained domains and non-Euclidean geometries. Stein Variational Mirror Descent and Mirrored Stein Variational Gradient Descent minimize the Kullback-Leibler (KL) divergence to constrained target distributions by evolving particles in a dual space defined by a mirror map. Stein Variational Natural Gradient exploits non-Euclidean geometry to more efficiently minimize the KL divergence to unconstrained targets. We derive these samplers from a new class of mirrored Stein operators and adaptive kernels developed in this work. We demonstrate that these new samplers yield accurate approximations to distributions on the simplex, deliver valid confidence intervals in post-selection inference, and converge more rapidly than prior methods in large-scale unconstrained posterior inference. Finally, we establish the convergence of our new procedures under verifiable conditions on the target distribution.
+                </p>
+                    </div>
+                    <p />
+                    </li>
+              <li><b>Optimal Thinning of MCMC Output. (<a href="https://arxiv.org/pdf/2005.03952.pdf">arxiv</a>,
+                  <a href="https://stein-thinning.org/">website</a>,
+                  <a href="https://www.youtube.com/watch?v=WwmTeLrNmOQ">video</a>, <a href="papers/thinning-slides.pdf">slides</a>)</b>
+                <br /><i>Marina Riabiz, Wilson Chen, Jon Cockayne, Pawel Swietach, Steven A. Niederer, Lester Mackey, and Chris. J. Oates.</i>
+                <br />Journal of the Royal Statistical Society, Series B (JRSSB). April 2022.
+                <br/><a class="btn" data-toggle="collapse" data-target="#steinthinning">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="steinthinning" class="collapse">
+                  <p></p>
+                  <p>
+		    The use of heuristics to assess the convergence and compress the output of Markov chain Monte Carlo can be sub-optimal in terms of the empirical approximations that are produced. Typically a number of the initial states are attributed to "burn in" and removed, whilst the chain can be "thinned" if compression is also required. In this paper we consider the problem of selecting a subset of states, of fixed cardinality, such that the approximation provided by their empirical distribution is close to optimal. A novel method is proposed, based on greedy minimisation of a kernel Stein discrepancy, that is suitable for problems where heavy compression is required. Theoretical results guarantee consistency of the method and its effectiveness is demonstrated in the challenging context of parameter inference for ordinary differential equations. Software is available in the "Stein Thinning" package in both Python and MATLAB, and example code is included.
+                  </p>
+                </div>
+                <p />
+              </li>
+	      <li><b>An Open Repository of Real-Time COVID-19 Indicators.  (<a href="https://doi.org/10.1101/2021.07.12.21259660">medrxiv</a>)</b>
+                <br /><i>Alex Reinhart, Logan Brooks, Maria Jahja, Aaron Rumack, Jingjing Tang, Wael Al Saeed, Taylor Arnold, Amartya Basu, Jacob Bien, Angel A. Cabrera, Andrew Chin, Eu Jing Chua, Brian Clark, Nat DeFries, Jodi Forlizzi, Samuel Gratzl, Alden Green, George Haff, Robin Han, Addison J. Hu, Sangwon Hyun, Ananya Joshi, Jimi Kim, Andrew Kuznetsov, Wichada La Motte-Kerr, Yeon Jin Lee, Kenneth Lee, Zachary C. Lipton, Michael X. Liu, Lester Mackey, Kathryn Mazaitis, Daniel J. McDonald, Balasubramanian Narasimhan, Natalia L. Oliveira, Pratik Patil, Adam Perer, Collin A. Politsch, Samyak Rajanala, Dawn Rucker, Nigam H. Shah, Vishnu Shankar, James Sharpnack, Dmitry Shemetov, Noah Simon, Vishakha Srivastava, Shuyi Tan, Robert Tibshirani, Elena Tuzhilina, Ana Karina Van Nortwick, Valerie Ventura, Larry Wasserman, Jeremy C. Weiss, Kristin Williams, Roni Rosenfeld, and Ryan J. Tibshirani.</i>
+		<br />Proceedings of the National Academy of Sciences. December 2021.
+                <br/><a class="btn" data-toggle="collapse" data-target="#covidcast">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="covidcast" class="collapse">
+                  <p></p>
+                  <p>
+                    The COVID-19 pandemic presented enormous data challenges in the United States. Policy makers, epidemiological modelers, and health researchers all require up-to-date data on the pandemic and relevant public behavior, ideally at fine spatial and temporal resolution. The COVIDcast API is our attempt to fill this need: operational since April 2020, it provides open access to both traditional public health surveillance signals (cases, deaths, and hospitalizations) and many auxiliary indicators of COVID-19 activity, such as signals extracted from de-identified medical claims data, massive online surveys, cell phone mobility data, and internet search trends. These are available at a fine geographic resolution (mostly at the county level) and are updated daily. The COVIDcast API also tracks all revisions to historical data, allowing modelers to account for the frequent revisions and backfill that are common for many public health data sources. All of the data is available in a common format through the API and accompanying R and Python software packages. This paper describes the data sources and signals, and provides examples demonstrating that the auxiliary signals in the COVIDcast API present information relevant to tracking COVID activity, augmenting traditional public health reporting and empowering research and decision-making.
+                  </p>
+                </div>
+                <p />
+	      </li>
+            <li><b>DeepMiner: Discovering Interpretable Representations for Mammogram Classification and Explanation. (<a href="https://arxiv.org/pdf/1805.12323.pdf">arxiv</a>, <a href="https://github.com/jimmyyhwu/ddsm-visual-primitives">code</a>)</b>
+              <br /><i>Jimmy Wu, Bolei Zhou, Diondra Peck, Scott Hsieh, Vandana Dialani, Lester Mackey, and Genevieve Patterson.</i>
+              <br />Harvard Data Science Review. October 2021.
+              <br/><a class="btn" data-toggle="collapse" data-target="#deepminer">View details &raquo</a>
+                  <!--colapsed text-->
+                  <div id="deepminer" class="collapse">
+                  <p></p>
+                  <p>We propose DeepMiner, a framework to discover interpretable representations in deep neural networks and to build explanations for medical predictions. By probing convolutional neural networks (CNNs) trained to classify cancer in mammograms, we show that many individual units in the final convolutional layer of a CNN respond strongly to diseased tissue concepts specified by the BI-RADS lexicon. After expert annotation of the interpretable units, our proposed method is able to generate explanations for CNN mammogram classification that are correlated with ground truth radiology reports on the DDSM dataset. We show that DeepMiner not only enables better understanding of the nuances of CNN classification decisions, but also possibly discovers new visual knowledge relevant to medical diagnosis.</p>
+                  </div>
+                  <p />
+                  </li>
+            <li><b>Online Learning with Optimism and Delay. (<a href="https://arxiv.org/pdf/2106.06885.pdf">arxiv</a>, <a href="https://github.com/geflaspohler/poold">code</a>, <a href="papers/poold-slides.pdf">slides</a>)</b>
+                <br /><i>Genevieve Flaspohler, Francesco Orabona, Judah Cohen, Soukayna Mouatadid, Miruna Oprescu, Paulo Orenstein, and Lester Mackey.</i>
+                <br />International Conference on Machine Learning (ICML). July 2021.
+                <br/><a class="btn" data-toggle="collapse" data-target="#poold">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="poold" class="collapse">
+                    <p></p>
+                    <p>
+                    Inspired by the demands of real-time climate and weather forecasting, we develop optimistic online learning algorithms that require no parameter tuning and have optimal regret guarantees under delayed feedback. Our algorithms -- DORM, DORM+, and AdaHedgeD -- arise from a novel reduction of delayed online learning to optimistic online learning that reveals how optimistic hints can mitigate the regret penalty caused by delay. We pair this delay-as-optimism perspective with a new analysis of optimistic learning that exposes its robustness to hinting errors and a new meta-algorithm for learning effective hinting strategies in the presence of delay. We conclude by benchmarking our algorithms on four subseasonal climate forecasting tasks, demonstrating low regret relative to state-of-the-art forecasting models.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Knowledge Distillation as Semiparametric Inference. (<a href="https://arxiv.org/pdf/2104.09732.pdf">arxiv</a>, <a href="https://github.com/microsoft/semiparametric-distillation">code</a>, <a href="papers/enhanced_kd_gantsc-slides.pdf">slides</a>)</b>
+              <br /><i>Tri Dao, Govinda M. Kamath, Vasilis Syrgkanis, and Lester Mackey.</i>
+              <br />International Conference on Learning Representations (ICLR). May 2021.
+                <br/><a class="btn" data-toggle="collapse" data-target="#enhancedkd">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="enhancedkd" class="collapse">
+                    <p></p>
+                    <p>
+                    A popular approach to model compression is to train an inexpensive student model to mimic the class probabilities of a highly accurate but cumbersome teacher model.
+                    Surprisingly, this two-step knowledge distillation process often leads to higher accuracy than training the student directly on labeled data.
+                    To explain and enhance this phenomenon, we cast knowledge distillation as a semiparametric inference problem with the optimal student model as the target, the unknown Bayes class probabilities as nuisance, and the teacher probabilities as a plug-in nuisance estimate.
+                    By adapting modern semiparametric tools, we derive new guarantees for the prediction error of standard distillation and develop two enhancements - cross-fitting and loss correction - to mitigate the impact of teacher overfitting and underfitting on student performance.
+                    We validate our findings empirically on both tabular and image data and observe consistent improvements from our knowledge distillation enhancements.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Initialization and Regularization of Factorized Neural Layers. (<a href="https://arxiv.org/pdf/2105.01029.pdf">arxiv</a>, <a href="https://github.com/microsoft/fnl_paper">code</a>, <a href="https://www.microsoft.com/en-us/research/blog/factorized-layers-revisited-compressing-deep-networks-without-playing-the-lottery/">blog</a>)</b>
+              <br /><i>Mikhail Khodak, Neil Tenenholtz, Lester Mackey, and Nicolo Fusi.</i>
+              <br />International Conference on Learning Representations (ICLR). May 2021.
+                <br/><a class="btn" data-toggle="collapse" data-target="#fnl">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="fnl" class="collapse">
+                    <p></p>
+                    <p>
+                    Factorized layers - operations parameterized by products of two or more matrices - occur in a variety of deep learning contexts, including compressed model training, certain types of knowledge distillation, and multi-head self-attention architectures. We study how to initialize and regularize deep nets containing such layers, examining two simple, understudied schemes, spectral initialization and Frobenius decay, for improving their performance. The guiding insight is to design optimization routines for these networks that are as close as possible to that of their well-tuned, non-decomposed counterparts; we back this intuition with an analysis of how the initialization and regularization schemes impact training with gradient descent, drawing on modern attempts to understand the interplay of weight-decay and batch-normalization. Empirically, we highlight the benefits of spectral initialization and Frobenius decay across a variety of settings. In model compression, we show that they enable low-rank methods to significantly outperform both unstructured sparsity and tensor methods on the task of training low-memory residual networks; analogs of the schemes also improve the performance of tensor decomposition techniques. For knowledge distillation, Frobenius decay enables a simple, overcomplete baseline that yields a compact model from over-parameterized training without requiring retraining with or pruning a teacher network. Finally, we show how both schemes applied to multi-head attention lead to improved performance on both translation and unsupervised pre-training.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Cross-validation Confidence Intervals for Test Error. (<a href="https://arxiv.org/pdf/2007.12671.pdf">arxiv</a>, <a href="https://github.com/alexandre-bayle/cvci">code</a>,  <a href="papers/cvci-slides.pdf">slides</a>)</b>
+              <br /><i>Pierre Bayle, Alexandre Bayle, Lucas Janson, and Lester Mackey.</i>
+	      <br />Advances in Neural Information Processing Systems (NeurIPS). December 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#cvci">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="cvci" class="collapse">
+                    <p></p>
+                    <p>
+                    This work develops central limit theorems for cross-validation and consistent estimators of its asymptotic variance under weak stability conditions on the learning algorithm. Together, these results provide practical, asymptotically-exact confidence intervals for k-fold test error and valid, powerful hypothesis tests of whether one learning algorithm has smaller k-fold test error than another. These results are also the first of their kind for the popular choice of leave-one-out cross-validation. In our real-data experiments with diverse learning algorithms, the resulting intervals and tests outperform the most popular alternative methods from the literature.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Stochastic Stein Discrepancies. (<a href="https://arxiv.org/pdf/2007.02857.pdf">arxiv</a>, <a href="https://github.com/jgorham/stochastic_stein_discrepancy">code</a>)</b>
+              <br /><i>Jackson Gorham, Anant Raj, and Lester Mackey.</i>
+	      <br />Advances in Neural Information Processing Systems (NeurIPS). December 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#ssd">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="ssd" class="collapse">
+                    <p></p>
+                    <p>
+		      Stein discrepancies (SDs) monitor convergence and non-convergence in approximate inference when exact integration and sampling are intractable. However, the computation of a Stein discrepancy can be prohibitive if the Stein operator -- often a sum over likelihood terms or potentials -- is expensive to evaluate. To address this deficiency, we show that stochastic Stein discrepancies (SSDs) based
+on subsampled approximations of the Stein operator inherit the convergence control properties of standard SDs with probability 1. Along the way, we establish the convergence of Stein variational gradient descent (SVGD) on unbounded domains, resolving an open question of Liu (2017). In our experiments with biased Markov chain Monte Carlo (MCMC) hyperparameter tuning, approximate MCMC sampler selection, and stochastic SVGD, SSDs deliver comparable inferences to standard SDs with orders of magnitude fewer likelihood evaluations.
+	            </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Minimax Estimation of Conditional Moment Models. (<a href="https://arxiv.org/abs/2006.07201">arxiv</a>, <a href="https://github.com/microsoft/AdversarialGMM">code</a>, <a href="https://www.microsoft.com/en-us/research/blog/adversarial-machine-learning-and-instrumental-variables-for-flexible-causal-modeling/">blog</a>)</b>
+              <br /><i>Nishanth Dikkala, Greg Lewis, Lester Mackey, and Vasilis Syrgkanis.</i>
+	      <br />Advances in Neural Information Processing Systems (NeurIPS). December 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#minicmm">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="minicmm" class="collapse">
+                    <p></p>
+                    <p>
+		      We develop an approach for estimating models described via conditional moment restrictions, with a prototypical application being non-parametric instrumental
+variable regression. We introduce a min-max criterion function, under which the estimation problem can be thought of as solving a zero-sum game between a modeler who is optimizing over the hypothesis space of the target model and an adversary who identifies violating moments over a test function space. We analyze the statistical estimation rate of the resulting estimator for arbitrary hypothesis spaces, with respect to an appropriate analogue of the mean squared error metric, for ill-posed inverse problems. We show that when the minimax criterion is regularized with a second moment penalty on the test function and the test function space is sufficiently rich, then the estimation rate scales with the critical radius of the hypothesis and test function spaces, a quantity which typically gives tight fast rates. Our main result follows from a novel localized Rademacher analysis of statistical learning problems defined via minimax objectives. We provide applications of our main results for several hypothesis spaces used in practice such as: reproducing kernel Hilbert spaces, high dimensional sparse linear functions, spaces defined via shape constraints, ensemble estimators such as random forests, and neural networks. For each of these applications we provide computationally efficient optimization methods for solving the corresponding minimax problem (e.g. stochastic first-order heuristics for neural networks). In several applications, we show how our modified mean squared error rate, combined with conditions that bound the ill-posedness of the inverse problem, lead to mean squared error rates. We conclude with an extensive experimental analysis of the proposed methods.
+	            </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Single Point Transductive Prediction. (<a href="https://arxiv.org/pdf/1908.02341.pdf">arxiv</a>, <a href="https://github.com/nileshtrip/SPTransducPredCode">code</a>, <a href="https://slideslive.com/38928039">talk</a>)</b>
+              <br /><i>Nilesh Tripuraneni and Lester Mackey.</i>
+	      <br />International Conference on Machine Learning (ICML). July 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#singlepointtransduction">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="singlepointtransduction" class="collapse">
+                    <p></p>
+                    <p>
+		      Standard methods in supervised learning separate training and prediction: the model is fit independently of any test points it may encounter. However, can knowledge of the next test point <b>x</b><sub>&#9733;</sub> be exploited to improve prediction accuracy? We address this question in the context of linear prediction, showing how techniques from semiparametric inference can be used transductively to combat regularization bias. We first lower bound the <b>x</b><sub>&#9733;</sub> prediction error of ridge regression and the Lasso, showing that they must incur significant bias in certain test directions. We then provide non-asymptotic upper bounds on the <b>x</b><sub>&#9733;</sub> prediction error of two transductive prediction rules. We conclude by showing the efficacy of our methods on both synthetic and real data, highlighting the improvements single point transductive prediction can provide in settings with distribution shift.
+                    </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Opportunities and Challenges for Analyzing Cancer Data at the Inter- and Intra-Institutional Levels. (<a href="https://doi.org/10.1200/PO.19.00394">article</a>)</b>
+              <br /><i>Julie Wu, Jordan Bryan, Samuel M. Rubinstein, Lucy Wang, Michele Lenoue-Newton, Raed Zuhour, Mia Levy, Christine Micheel, Yaomin Xu, Suresh K. Bhavnani, Lester Mackey, and Jeremy L. Warner.</i>
+	      <br />JCO Precision Oncology. June 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#geniemetastasis">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="geniemetastasis" class="collapse">
+                      <p></p>
+                    <p>
+		      <b>PURPOSE:</b> Our goal was to identify the opportunities and challenges in analyzing data from the American Association of Cancer Research Project Genomics Evidence Neoplasia Information Exchange (GENIE), a multi-institutional database derived from clinically driven genomic testing, at both the inter- and the intra-institutional level. Inter-institutionally, we identified genotypic differences between primary and metastatic tumors across the 3 most represented cancers in GENIE. Intra-institutionally, we analyzed the clinical characteristics of the Vanderbilt-Ingram Cancer Center (VICC) subset of GENIE to inform the interpretation of GENIE as a whole.
+		      <br/><b>METHODS:</b> We performed overall cohort matching on the basis of age, ethnicity, and sex of 13,208 patients stratified by cancer type (breast, colon, or lung) and sample site (primary or metastatic). We then determined whether detected variants, at the gene level, were associated with primary or metastatic tumors. We extracted clinical data for the VICC subset from VICC's clinical data warehouse. Treatment exposures were mapped to a 13-class schema derived from the HemOnc ontology.
+		      <br/><b>RESULTS:</b> Across 756 genes, there were significant differences in all cancer types. In breast cancer, ESR1 variants were over-represented in metastatic samples (odds ratio, 5.91; q < 10e-6). TP53 mutations were over-represented in metastatic samples across all cancers. VICC had a significantly different cancer type distribution than that of GENIE but patients were well matched with respect to age, sex, and sample type. Treatment data from VICC was used for a bipartite network analysis, demonstrating clusters with a mix of histologies and others being more histology specific.
+		      <br/><b>CONCLUSION:</b> This article demonstrates the feasibility of deriving meaningful insights from GENIE at the inter- and intra-institutional level and illuminates the opportunities and challenges of the data GENIE contains. The results should help guide future development of GENIE, with the goal of fully realizing its potential for accelerating precision medicine.
+                    </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Approximate Cross-validation: Guarantees for Model Assessment and Selection. (<a href="https://arxiv.org/pdf/2003.00617.pdf">arxiv</a>, <a href="https://github.com/aswilson07/ApproximateCV">code</a>, <a href="https://slideslive.com/38930365/approximate-crossvalidation-guarantees-for-model-assessment-and-selection?ref=account-folder-52123-folders">talk</a>)</b>
+                <br /><i>Ashia Wilson, Maximilian Kasy, and Lester Mackey.</i>
+		<br />International Conference on Artificial Intelligence and Statistics (AISTATS). June 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#acv">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="acv" class="collapse">
+                    <p></p>
+                    <p>
+		      Cross-validation (CV) is a popular approach for assessing and selecting predictive models. However, when the number of folds is large, CV suffers from a need to repeatedly refit a learning procedure on a large number of training datasets. Recent work in empirical risk minimization (ERM) approximates the expensive refitting with a single Newton step warm-started from the full training set optimizer. While this can greatly reduce runtime, several open questions remain including whether these approximations lead to faithful model selection and whether they are suitable for non-smooth objectives. We address these questions with three main contributions: (i) we provide uniform non-asymptotic, deterministic model assessment guarantees for approximate CV; (ii) we show that (roughly) the same conditions also guarantee model selection performance comparable to CV; (iii) we provide a proximal Newton extension of the approximate CV framework for non-smooth prediction problems and develop improved assessment guarantees for problems such as L1-regularized ERM.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Importance Sampling via Local Sensitivity. (<a href="https://arxiv.org/pdf/1911.01575.pdf">arxiv</a>, <a href="https://slideslive.com/38930233/paper-id-1030-importance-sampling-via-local-sensitivity?ref=speaker-32217-latest">talk</a>)</b>
+                <br /><i>Anant Raj, Cameron Musco, and Lester Mackey.</i>
+		<br />International Conference on Artificial Intelligence and Statistics (AISTATS). June 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#isls">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="isls" class="collapse">
+                    <p></p>
+                    <p>
+		      Given a loss function F : X -> R+ that can be written as the sum of losses over a large set of inputs a1, ..., an, it is often desirable to approximate F by subsampling the input points. Strong theoretical guarantees require taking into account the importance of each point, measured by how much its individual loss contributes to F(x). Maximizing this importance over all x yields the sensitivity score of ai. Sampling with probabilities proportional to these scores gives strong guarantees, allowing one to approximately minimize of F using just the subsampled points.
+
+		      Unfortunately, sensitivity sampling is difficult to apply since (1) it is unclear how to efficiently compute the sensitivity scores and (2) the sample size required is often impractically large. To overcome both obstacles we introduce local sensitivity, which measures data point importance in a ball around some center x0. We show that the local sensitivity can be efficiently estimated using the leverage scores of a quadratic approximation to F and that the sample size required to approximate F around x0 can be bounded. We propose employing local sensitivity sampling in an iterative optimization method and analyze its convergence when F is smooth and convex.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Evaluation of Combined Artificial Intelligence and Radiologist Assessment to Interpret Screening Mammograms. (<a href="doi:10.1001/jamanetworkopen.2020.0265">article</a>)</b>
+                <br /><i>Thomas Schaffter, Diana S. M. Buist, Christoph I. Lee, Yaroslav Nikulin, Dezso Ribli, Yuanfang Guan, William Lotter, Zequn Jie, Hao Du, Sijia Wang, Jiashi Feng, Mengling Feng, Hyo-Eun Kim, Francisco Albiol, Alberto Albiol, Stephen Morrell, Zbigniew Wojna, Mehmet Eren Ahsen, Umar Asif, Antonio Jimeno Yepes, Shivanthan Yohanandan, Simona Rabinovici-Cohen, Darvin Yi, Bruce Hoff, Thomas Yu, Elias Chaibub Neto, Daniel L. Rubin, Peter Lindholm, Laurie R. Margolies, Russell Bailey McBride, Joseph H. Rothstein, Weiva Sieh, Rami Ben-Ari, Stefan Harrer, Andrew Trister, Stephen Friend, Thea Norman, Berkman Sahiner, Fredrik Strand, Justin Guinney, Gustavo Stolovitzky, and the DM DREAM Consortium (including Lester Mackey).</i>
+		<br />Journal of the American Medical Association Network Open. March 2020.
+                <br/><a class="btn" data-toggle="collapse" data-target="#deepmammograms">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="deepmammograms" class="collapse">
+                    <p></p>
+                    <p>
+		      <b>Importance:</b> Mammography screening currently relies on subjective human interpretation. Artificial intelligence (AI) advances could be used to increase mammography screening accuracy by reducing missed cancers and false positives.
+		      <br/><b>Objective:</b> To evaluate whether AI can overcome human mammography interpretation limitations with a rigorous, unbiased evaluation of machine learning algorithms.
+		      <br/><b>Design, Setting, and Participants:</b> In this diagnostic accuracy study conducted between September 2016 and November 2017, an international, crowdsourced challenge was hosted to foster AI algorithm development focused on interpreting screening mammography. More than 1100 participants comprising 126 teams from 44 countries participated. Analysis began November 18, 2016.
+		      <br/><b>Main Outcomes and Measurements:</b> Algorithms used images alone (challenge 1) or combined images, previous examinations (if available), and clinical and demographic risk factor data (challenge 2) and output a score that translated to cancer yes/no within 12 months. Algorithm accuracy for breast cancer detection was evaluated using area under the curve and algorithm specificity compared with radiologists' specificity with radiologists' sensitivity set at 85.9% (United States) and 83.9% (Sweden). An ensemble method aggregating top-performing AI algorithms and radiologists' recall assessment was developed and evaluated.
+		      <br/><b>Results:</b> Overall, 144,231 screening mammograms from 85,580 US women (952 cancer positive less than or equal to 12 months from screening) were used for algorithm training and validation. A second independent validation cohort included 166,578 examinations from 68,008 Swedish women (780 cancer positive). The top-performing algorithm achieved an area under the curve of 0.858 (United States) and 0.903 (Sweden) and 66.2% (United States) and 81.2% (Sweden) specificity at the radiologists' sensitivity, lower than community-practice radiologists' specificity of 90.5% (United States) and 98.5% (Sweden). Combining top-performing algorithms and US radiologist assessments resulted in a higher area under the curve of 0.942 and achieved a significantly improved specificity (92.0%) at the same sensitivity.
+		      <br/><b>Conclusions and Relevance:</b> While no single AI algorithm outperformed radiologists, an ensemble of AI algorithms combined with radiologist assessment in a single-reader screening environment improved overall accuracy. This study underscores the potential of using machine learning methods for enhancing mammography screening interpretation.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Minimum Stein Discrepancy Estimators. (<a href="https://arxiv.org/pdf/1906.08283.pdf">arxiv</a>, <a href="https://github.com/fxbriol/Kernel_Estimators/tree/master/Code">code</a>)</b>
+                <br /><i>Alessandro Barp, Francois-Xavier Briol, Andrew B. Duncan, Mark Girolami, and Lester Mackey.</i>
+		<br />Advances in Neural Information Processing Systems (NeurIPS). December 2019.
+                <br/><a class="btn" data-toggle="collapse" data-target="#steinestimation">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="steinestimation" class="collapse">
+                    <p></p>
+                    <p>
+		      When maximum likelihood estimation is infeasible, one often turns to score matching, contrastive divergence, or minimum probability flow learning to obtain tractable parameter estimates. We provide a unifying perspective of these techniques as minimum Stein discrepancy estimators and use this lens to design new diffusion kernel Stein discrepancy (DKSD) and diffusion score matching (DSM) estimators with complementary strengths. We establish the consistency, asymptotic normality, and robustness of DKSD and DSM estimators, derive stochastic Riemannian gradient descent algorithms for their efficient optimization, and demonstrate their advantages over score matching in models with non-smooth densities or heavy tailed distributions.
+                    </p>
+                    </div>
+                    <p />
+            </li>
+            <li><b>Stochastic Runge-Kutta Accelerates Langevin Monte Carlo and Beyond. (<a href="https://arxiv.org/pdf/1906.07868.pdf">arxiv</a>)</b>
+                <br /><i>Xuechen Li, Denny Wu, Lester Mackey, and Murat A. Erdogdu.</i>
+		<br />Advances in Neural Information Processing Systems (NeurIPS). December 2019.
+                <br/><a class="btn" data-toggle="collapse" data-target="#srk">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="srk" class="collapse">
+                    <p></p>
+                    <p>
+		      Sampling with Markov chain Monte Carlo methods typically amounts to discretizing some continuous-time dynamics with numerical integration. In this paper, we establish the convergence rate of sampling algorithms obtained by discretizing smooth Ito diffusions exhibiting fast Wasserstein-2 contraction, based on local deviation properties of the integration scheme. In particular, we study a sampling algorithm constructed by discretizing the overdamped Langevin diffusion with the method of stochastic Runge-Kutta. For strongly convex potentials that are smooth up to a certain order, its iterates converge to the target distribution in 2-Wasserstein distance in &Otilde;(d&epsilon;^{-2/3}) iterations. This improves upon the best-known rate for strongly log-concave sampling based on the overdamped Langevin equation using only the gradient oracle without adjustment. In addition, we extend our analysis of stochastic Runge-Kutta methods to uniformly dissipative diffusions with possibly non-convex potentials and show they achieve better rates compared to the Euler-Maruyama scheme in terms of the dependence on tolerance &epsilon;. Numerical studies show that these algorithms lead to better stability and lower asymptotic errors.
+                    </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Accelerating Rescaled Gradient Descent: Fast Optimization of Smooth Functions. (<a href="https://arxiv.org/pdf/1902.08825.pdf">arxiv</a>, <a href="https://github.com/aswilson07/ARGD">code</a>)</b>
+                <br /><i>Ashia Wilson, Lester Mackey, and Andre Wibisono.</i>
+		<br />Advances in Neural Information Processing Systems (NeurIPS). December 2019.
+                <br/><a class="btn" data-toggle="collapse" data-target="#argd">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="argd" class="collapse">
+                    <p></p>
+                    <p>
+		      We present a family of algorithms, called descent algorithms, for optimizing convex and non-convex functions. We also introduce a new first-order algorithm, called rescaled gradient descent (RGD), and show that RGD achieves a faster convergence rate than gradient descent provided the function is strongly smooth -- a natural generalization of the standard smoothness assumption on the objective function. When the objective function is convex, we present two novel frameworks for "accelerating" descent methods, one in the style of Nesterov and the other in the style of Monteiro and Svaiter, using a single Lyapunov. Rescaled gradient descent can be accelerated under the same strong smoothness assumption using both frameworks. We provide several examples of strongly smooth loss functions in machine learning and numerical experiments that verify our theoretical findings. We also present several extensions of our novel Lyapunov framework, including deriving optimal universal tensor methods and extending our framework to the coordinate setting.
+                    </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Measuring Sample Quality with Diffusions. (<a href="https://arxiv.org/pdf/1611.06972.pdf">arxiv</a>, <a href="https://jgorham.github.io/SteinDiscrepancy.jl/">code</a>)</b>
+            <br /><i>Jackson Gorham, Andrew B. Duncan, Sebastian J. Vollmer, and Lester Mackey.</i>
+            <br />Annals of Applied Probability.  October 2019.
+            <br/><a class="btn" data-toggle="collapse" data-target="#diffusions">View details &raquo</a>
+            <!--colapsed text-->
+            <div id="diffusions" class="collapse">
+            <p></p>
+            <p>Stein's method for measuring convergence to a continuous target distribution relies on an operator characterizing the target and Stein factor bounds on the solutions of an associated differential equation.  While such operators and bounds are readily available for a diversity of univariate targets, few multivariate targets have been analyzed.  We introduce a new class of characterizing operators based on Ito diffusions and develop explicit multivariate Stein factor bounds for any target with a fast-coupling Ito diffusion.  As example applications, we develop computable and convergence-determining diffusion Stein discrepancies for log-concave, heavy-tailed, and multimodal targets and use these quality measures to select the hyperparameters of biased Markov chain Monte Carlo (MCMC) samplers, compare random and deterministic quadrature rules, and quantify bias-variance tradeoffs in approximate MCMC.  Our results establish a near-linear relationship between diffusion Stein discrepancies and Wasserstein distances, improving upon past work even for strongly log-concave targets.  The exposed relationship between Stein factors and Markov process coupling may be of independent interest.</p>
+            </div>
+            <p />
+            </li>
+          <li><b>Improving Subseasonal Forecasting in the Western U.S. with Machine Learning. (<a href="https://arxiv.org/pdf/1809.07394.pdf">arxiv</a>, <a href="https://doi.org/10.7910/DVN/IHBANG">our SubseasonalRodeo dataset</a>, <a href="papers/rodeo-slides.pdf">slides</a>, <a href="papers/rodeo-neurips18-poster.pdf">poster</a>)</b>
+            <br /><i>Jessica Hwang, Paulo Orenstein, Judah Cohen, Karl Pfeiffer, and Lester Mackey.</i>
+            <br />International Conference on Knowledge Discovery and Data Mining (KDD).  August 2019.
+            <br/><a class="btn" data-toggle="collapse" data-target="#rodeo">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="rodeo" class="collapse">
+                <p></p>
+                <p>
+                Water managers in the western United States (U.S.) rely on longterm forecasts of temperature and precipitation to prepare for droughts and other wet weather extremes. To improve the accuracy of these longterm forecasts, the U.S. Bureau of Reclamation and the National Oceanic and Atmospheric Administration (NOAA) launched the Subseasonal Climate Forecast Rodeo, a year-long real-time forecasting challenge in which participants aimed to skillfully predict temperature and precipitation in the western U.S. two to four weeks and four to six weeks in advance. Here we present and evaluate our machine learning approach to the Rodeo and release our SubseasonalRodeo dataset, collected to train and evaluate our forecasting system.
+                </p>
+                <p>
+                  Our system is an ensemble of two nonlinear regression models. The first integrates the diverse collection of meteorological measurements and dynamic model forecasts in the SubseasonalRodeo dataset and prunes irrelevant predictors using a customized multitask model selection procedure. The second uses only historical measurements of the target variable (temperature or precipitation) and introduces multitask nearest neighbor features into a weighted local linear regression. Each model alone is significantly more accurate than the debiased operational U.S. Climate Forecasting System (CFSv2), and our ensemble skill exceeds that of the top Rodeo competitor for each target variable and forecast horizon. Moreover, over 2011-2018, an ensemble of our regression models and debiased CFSv2 improves debiased CFSv2 skill by 40-50% for temperature and 129-169% for precipitation. We hope that both our dataset and our methods will help to advance the state of the art in subseasonal forecasting.
+                </p>
+                </div>
+                <p />
+                </li>
+            <li><b>Stein Point Markov Chain Monte Carlo. (<a href="https://arxiv.org/pdf/1905.03673.pdf">arxiv</a>, <a href="
+https://github.com/wilson-ye-chen/sp-mcmc">code</a>)</b>
+                <br /><i>Wilson Ye Chen, Alessandro Barp, Francois-Xavier Briol, Jackson Gorham, Mark Girolami, Lester Mackey, and Chris. J. Oates.</i>
+		<br />International Conference on Machine Learning (ICML).  June 2019.
+                <br/><a class="btn" data-toggle="collapse" data-target="#spmcmc">View details &raquo</a>
+                    <!--colapsed text-->
+                    <div id="spmcmc" class="collapse">
+                    <p></p>
+                    <p>
+		    An important task in machine learning and statistics is the approximation of a probability measure by an empirical measure supported on a discrete point set. Stein Points are a class of algorithms for this task, which proceed by sequentially minimising a Stein discrepancy between the empirical measure and the target and, hence, require the solution of a non-convex optimisation problem to obtain each new point. This paper removes the need to solve this optimisation problem by, instead, selecting each new point based on a Markov chain sample path. This significantly reduces the computational cost of Stein Points and leads to a suite of algorithms that are straightforward to implement. The new algorithms are illustrated on a set of challenging Bayesian inference problems, and rigorous theoretical guarantees of consistency are established.  
+                    </p>
+                    </div>
+                    <p />
+                    </li>
+            <li><b>Stratification of amyotrophic lateral sclerosis patients: a crowdsourcing approach. (<a href="https://rdcu.be/bh7S1">article</a>)</b>
+            <br /><i>Robert Kueffner, Neta Zach, Maya Bronfeld, Raquel Norel, Nazem Atassi, Venkat Balagurusamy, Barbara DiCamillo, Adriano Chio, Merit Cudkowicz, Donna Dillenberger, Javier Garcia-Garcia, Orla Hardiman, Bruce Hoff, Joshua Knight, Melanie L. Leitner, Guang Li, Lara Mangravite, Thea Norman, Liuxia Wang, The ALS Stratification Consortium (including Lester Mackey), Jinfeng Xiao, Wen-Chieh Fang, Jian Peng, Chen Yang, Huan-Jui Chang, and Gustavo Stolovitzky.</i>
+            <br />Scientific Reports.  January 2019.
+            <br/><a class="btn" data-toggle="collapse" data-target="#als-stratify">View details &raquo</a>
+            <!--colapsed text-->
+            <div id="als-stratify" class="collapse">
+            <p></p>
+            <p>Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative disease where substantial heterogeneity in clinical presentation urgently requires a better stratification of patients for the development of drug trials and clinical care. In this study we explored stratification through a crowdsourcing approach, the DREAM Prize4Life ALS Stratification Challenge. Using data from >10,000 patients from ALS clinical trials and 1479 patients from community-based patient registers, more than 30 teams developed new approaches for machine learning and clustering, outperforming the best current predictions of disease outcome. We propose a new method to integrate and analyze patient clusters across methods, showing a clear pattern of consistent and clinically relevant sub-groups of patients that also enabled the reliable classification of new patients. Our analyses reveal novel insights in ALS and describe for the first time the potential of a crowdsourcing to uncover hidden patient sub-populations, and to accelerate disease understanding and therapeutic development.</p>
+            </div>
+            <p />
+            </li>
+            <li><b>A Multifactorial Model of T Cell Expansion and Durable Clinical Benefit in Response to a PD-L1 Inhibitor. (<a href="https://doi.org/10.1371/journal.pone.0208422">article</a>, <a href="https://github.com/lrgr/multifactorial-immune-response#references">code</a>, <a href="https://www.ascopost.com/News/59730">The ASCO Post</a>)</b>
+            <br /><i>Mark DM Leiserson, Vasilis Syrgkanis, Amy Gilson, Miroslav Dudik, Sharon Gillett, Jennifer Chayes, Christian Borgs, Dean F Bajorin, Jonathan Rosenberg, Samuel Funt, Alexandra Snyder, and Lester Mackey.</i>
+            <br />PLOS One.  December 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#multifactorial">View details &raquo</a>
+            <!--colapsed text-->
+            <div id="multifactorial" class="collapse">
+            <p></p>
+            <p>Checkpoint inhibitor immunotherapies have had major success in treating patients with late-stage cancers, yet the minority of patients benefit. Mutation load and PD-L1 staining are leading biomarkers associated with response, but each is an imperfect predictor. A key challenge to predicting response is modeling the interaction between the tumor and immune system. We begin to address this challenge with a multifactorial model for response to anti-PD-L1 therapy. We train a model to predict immune response in patients after treatment based on 36 clinical, tumor, and circulating features collected prior to treatment. We analyze data from 21 bladder cancer patients using the elastic net high-dimensional regression procedure and, as training set error is a biased and overly optimistic measure of prediction error, we use leave-one-out cross-validation to obtain unbiased estimates of accuracy on held-out patients. In held-out patients, the model explains 79% of the variance in T cell clonal expansion. This predicted immune response is multifactorial, as the variance explained is at most 23% if clinical, tumor, or circulating features are excluded. Moreover, if patients are triaged according to predicted expansion, only 38% of non-durable clinical benefit (DCB) patients need be treated to ensure that 100% of DCB patients are treated. In contrast, using mutation load or PD-L1 staining alone, one must treat at least 77% of non-DCB patients to ensure that all DCB patients receive treatment. Thus, integrative models of immune response may improve our ability to anticipate clinical benefit of immunotherapy.</p>
+            </div>
+            <p />
+            </li>
+            <li><b>S2S reboot: An argument for greater inclusion of machine learning in subseasonal to seasonal forecasts. (<a href="https://doi.org/10.1002/wcc.567">article</a>)</b>
+            <br /><i>Judah Cohen, Dim Coumou, Jessica Hwang, Lester Mackey, Paulo Orenstein, Sonja Totz, and Eli Tziperman.</i>
+            <br />WIREs Climate Change.  December 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#s2sreboot">View details &raquo</a>
+            <!--colapsed text-->
+            <div id="s2sreboot" class="collapse">
+            <p></p>
+            <p>
+            The discipline of seasonal climate prediction began as an exercise in simple statistical techniques. However, today the large government forecast centers almost exclusively rely on complex fully coupled dynamical forecast systems for their subseasonal to seasonal (S2S) predictions while statistical techniques are mostly neglected and those techniques still in use have not been updated in decades. In this Opinion Article, we argue that new statistical techniques mostly developed outside the field of climate science, collectively referred to as machine learning, can be adopted by climate forecasters to increase the accuracy of S2S predictions. We present an example of where unsupervised learning demonstrates higher accuracy in a seasonal prediction than the state-of-the-art dynamical systems. We also summarize some relevant machine learning methods that are most applicable to climate prediction. Finally, we show by comparing real-time dynamical model forecasts with observations from winter 2017/2018 that dynamical model forecasts are almost entirely insensitive to polar vortex (PV) variability and the impact on sensible weather. Instead, statistical forecasts more accurately predicted the resultant sensible weather from a mid-winter PV disruption than the dynamical forecasts. The important implication from the poor dynamical forecasts is that if Arctic change influences mid-latitude weather through PV variability, then the ability of dynamical models to demonstrate the existence of such a pathway is compromised. We conclude by suggesting that S2S prediction will be most beneficial to the public by incorporating mixed or a hybrid of dynamical forecasts and updated statistical techniques such as machine learning.
+            </p>
+            </div>
+            <p />
+            </li>
+            <li><b>Global Non-convex Optimization with Discretized Diffusions. (<a href="https://arxiv.org/pdf/1810.12361.pdf">arxiv</a>, <a href="papers/nonconvex_diffusion_optimization-neurips18-poster.pdf">poster</a>)</b>
+                <br /><i>Murat A. Erdogdu, Lester Mackey, and Ohad Shamir.</i>
+                <br />Advances in Neural Information Processing Systems (NeurIPS).  December 2018.
+                <br/><a class="btn" data-toggle="collapse" data-target="#nonconvex_diffusion_optimization">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="nonconvex_diffusion_optimization" class="collapse">
+                <p></p>
+                <p>
+                An Euler discretization of the Langevin diffusion is known to converge to the global minimizers of certain convex and non-convex optimization problems. We show that this property holds for any suitably smooth diffusion and that different diffusions are suitable for optimizing different classes of convex and non-convex functions. This allows us to design diffusions suitable for globally optimizing convex and non-convex functions not covered by the existing Langevin theory. Our non-asymptotic analysis delivers computable optimization and integration error bounds based on easily accessed properties of the objective and chosen diffusion. Central to our approach are new explicit Stein factor bounds on the solutions of Poisson equations. We complement these results with improved optimization guarantees for targets other than the standard Gibbs measure.
+                </p>
+                </div>
+                <p />
+            </li>
+          <li><b>Random Feature Stein Discrepancies. (<a href="https://arxiv.org/pdf/1806.07788.pdf">arxiv</a>, <a href="https://bitbucket.org/jhhuggins/random-feature-stein-discrepancies/">code</a>, <a href="papers/random_feature_stein-neurips18-poster.pdf">poster</a>)</b>
+            <br /><i>Jonathan H. Huggins and Lester Mackey.</i>
+            <br />Advances in Neural Information Processing Systems (NeurIPS).  December 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#rfsd">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="rfsd" class="collapse">
+                <p></p>
+                <p>Computable Stein discrepancies have been deployed for a variety of applications, including sampler selection in posterior inference, approximate Bayesian inference, and goodness-of-fit testing. Existing convergence-determining Stein discrepancies admit strong theoretical guarantees but suffer from a computational cost that grows quadratically in the sample size. While linear-time Stein discrepancies have been proposed for goodness-of-fit testing, they exhibit avoidable degradations in testing power---even when power is explicitly optimized. To address these shortcomings, we introduce feature Stein discrepancies (&Phi;SDs), a new family of quality measures that can be cheaply approximated using importance sampling. We show how to construct &Phi;SDs that provably determine the convergence of a sample to its target and develop high-accuracy approximations---random &Phi;SDs (R&Phi;SDs)---which are computable in near-linear time. In our experiments with sampler selection for approximate posterior inference and goodness-of-fit testing, R&Phi;SDs typically perform as well or better than quadratic-time KSDs while being orders of magnitude faster to compute.</p>
+                </div>
+                <p />
+                </li>
+          <li><b>Stein Points. (<a href="https://arxiv.org/pdf/1803.10161.pdf">arxiv</a>, <a href="https://github.com/wilson-ye-chen/stein_points">code</a>, <a href="papers/steinpoints-icml18.bib">bib</a>)</b>
+            <br /><i>Wilson Ye Chen, Lester Mackey, Jackson Gorham, Francois-Xavier Briol, and Chris J. Oates.</i>
+            <br />International Conference on Machine Learning (ICML). July 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#steinpoints">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="steinpoints" class="collapse">
+                <p></p>
+                <p>An important task in computational statistics and machine learning is to approximate a posterior distribution p(x) with an empirical measure supported on a set of representative points {x_i}_{i=1}^n. This paper focuses on methods where the selection of points is essentially deterministic, with an emphasis on achieving accurate approximation when n is small. To this end, we present `Stein Points'. The idea is to exploit either a greedy or a conditional gradient method to iteratively minimise a kernel Stein discrepancy between the empirical measure and p(x). Our empirical results demonstrate that Stein Points enable accurate approximation of the posterior at modest computational cost. In addition, theoretical results are provided to establish convergence of the method.</p>
+                </div>
+                <p />
+                </li>
+          <li><b>Orthogonal Machine Learning: Power and Limitations. (<a href="https://arxiv.org/pdf/1711.00342.pdf">arxiv</a>, <a href="papers/orthogonalml-slides.pdf">slides</a>, <a href="https://github.com/IliasZadik/double_orthogonal_ml">code</a>, <a href="papers/orthogonalml-icml18.bib">bib</a>)</b>
+            <br /><i>Lester Mackey, Vasilis Syrgkanis, and Ilias Zadik.</i>
+            <br />International Conference on Machine Learning (ICML). July 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#doubleorthogonal">View details &raquo</a>
+                <!--colapsed text-->
+                <div id="doubleorthogonal" class="collapse">
+                <p></p>
+                <p>Double machine learning provides $\sqrt{n}$-consistent estimates of parameters of interest even when high-dimensional or nonparametric nuisance parameters are estimated at an $n^{-1/4}$ rate. The key is to employ Neyman-orthogonal moment equations which are first-order insensitive to perturbations in the nuisance parameters. We show that the $n^{-1/4}$ requirement can be improved to $n^{-1/(2k+2)}$ by employing a k-th order notion of orthogonality that grants robustness to more complex or higher-dimensional nuisance parameters. In the partially linear regression setting popular in causal inference, we show that we can construct second-order orthogonal moments if and only if the treatment residual is not normally distributed.  Our proof relies on Stein's lemma and may be of independent interest.  We conclude by demonstrating the robustness benefits of an explicit doubly-orthogonal estimation procedure for treatment effect.</p>
+                </div>
+                <p />
+                </li>
+          <li><b>Accurate Inference for Adaptive Linear Models. (<a href="https://arxiv.org/pdf/1712.06695.pdf">arxiv</a>, <a href="https://github.com/yash-deshpande/decorrelating-linear-models.git">code</a>, <a href="papers/wdecorrelation-icml18.bib">bib</a>)</b>
+            <br /><i>Yash Deshpande, Lester Mackey, Vasilis Syrgkanis, and Matt Taddy.</i>
+            <br />International Conference on Machine Learning (ICML). July 2018.
+            <br/><a class="btn" data-toggle="collapse" data-target="#w-decorrelation">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="w-decorrelation" class="collapse">
+              <p></p>
+              <p>Estimators computed from adaptively collected data do not behave like their non-adaptive brethren. Rather, the sequential dependence of the collection policy can lead to severe distributional biases that persist even in the infinite data limit. We develop a general method -- W-decorrelation -- for transforming the bias of adaptive linear regression estimators into variance. The method uses only coarse-grained information about the data collection policy and does not need access to propensity scores or exact knowledge of the policy. We bound the finite-sample bias and variance of W-decorrelation and develop asymptotically correct confidence intervals based on a novel martingale central limit theorem. We then demonstrate the empirical benefits of the generic W-decorrelation procedure in two different adaptive data settings: the multi-armed bandit and the autoregressive time series settings.</p>
+              </div>
+              <p />
+              </li>
+        <li><b>Expert identification of visual primitives used by CNNs during mammogram classification. (<a href="https://arxiv.org/pdf/1803.04858.pdf">arxiv</a>, <a href="https://github.com/jimmyyhwu/ddsm-visual-primitives">code</a>, <a href="papers/netdissect-spie18-poster.pdf">poster</a>, <a href="papers/netdissect-spie18.bib">bib</a>)</b>
+        <br /><i>Jimmy Wu, Diondra Peck, Scott Hsieh, Vandana Dialani, Constance D. Lehman, Bolei Zhou, Vasilis Syrgkanis, Lester Mackey, and Genevieve Patterson.</i>
+        <br />SPIE Medical Imaging. February 2018.
+        <br/><a class="btn" data-toggle="collapse" data-target="#netdissect">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="netdissect" class="collapse">
+        <p></p>
+        <p>This work interprets the internal representations of deep neural networks trained for classifying
+        diseased tissue in 2D mammograms. We propose an expert-in-the-loop interpretation
+        method to label the behavior of internal units in convolutional neural networks (CNNs). Expert
+        radiologists identify that the visual patterns detected by the units are correlated with
+        meaningful medical phenomena such as mass tissue and calcificated vessels. We demonstrate
+        that several trained CNN models are able to produce explanatory descriptions to support
+        the final classification decisions. We view this as an important first step toward interpreting
+        the internal representations of medical classification CNNs and explaining their predictions.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Empirical Bayesian Analysis of Simultaneous Changepoints in Multiple Data Sequences. (<a href="https://arxiv.org/pdf/1508.01280.pdf">arxiv</a>, <a href="https://github.com/zfzf21/BASIC_changepoint/archive/master.zip">code</a>, <a href="papers/basic-aoas17.bib">bib</a>)</b>
+        <br /><i>Zhou Fan and Lester Mackey.</i>
+        <br />Annals of Applied Statistics.  December 2017.
+        <br/><a class="btn" data-toggle="collapse" data-target="#basic">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="basic" class="collapse">
+        <p></p>
+        <p>Copy number variations in cancer cells and volatility fluctuations in stock prices are commonly manifested as changepoints occurring at the same positions across related data sequences. We introduce a Bayesian modeling framework, BASIC, that employs a changepoint prior to capture the co-occurrence tendency in data of this type. We design efficient algorithms to sample from and maximize over the BASIC changepoint posterior and develop a Monte Carlo expectation-maximization procedure to select prior hyperparameters in an empirical Bayes fashion. We use the resulting BASIC framework to analyze DNA copy number variations in the NCI-60 cancer cell lines and to identify important events that affected the price volatility of S&P 500 stocks from 2000 to 2009.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Measuring Sample Quality with Kernels. (<a href="https://arxiv.org/pdf/1703.01717.pdf">arxiv</a>, <a href="papers/ksd-slides.pdf">slides</a>, <a href="https://jgorham.github.io/SteinDiscrepancy.jl/">code</a>, <a href="papers/ksd-icml17.bib">bib</a>)</b>
+        <br /><i>Jackson Gorham and Lester Mackey.</i>
+        <br />International Conference on Machine Learning (ICML). August 2017.
+        <br/><a class="btn" data-toggle="collapse" data-target="#ksd">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="ksd" class="collapse">
+        <p></p>
+        <p>Approximate Markov chain Monte Carlo (MCMC) offers the promise of more rapid sampling at the cost of more biased inference. Since standard MCMC diagnostics fail to detect these biases, researchers have developed computable Stein discrepancy measures that provably determine the convergence of a sample to its target distribution. This approach was recently combined with the theory of reproducing kernels to define a closed-form kernel Stein discrepancy (KSD) computable by summing kernel evaluations across pairs of sample points. We develop a theory of weak convergence for KSDs based on Stein's method, demonstrate that commonly used KSDs fail to detect non-convergence even for Gaussian targets, and show that kernels with slowly decaying tails provably determine convergence for a large class of target distributions. The resulting convergence-determining KSDs are suitable for comparing biased, exact, and deterministic sample sequences and simpler to compute and parallelize than alternative Stein discrepancies. We use our tools to compare biased samplers, select sampler hyperparameters, and improve upon existing KSD approaches to one-sample hypothesis testing and sample quality improvement.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Improving Gibbs Sampler Scan Quality with DoGS. (<a href="https://arxiv.org/pdf/1707.05807.pdf">arxiv</a>, <a href="papers/dogs-icml17.bib">bib</a>)</b>
+        <br /><i>Ioannis Mitliagkas and Lester Mackey.</i>
+        <br />International Conference on Machine Learning (ICML). August 2017.
+        <br/><a class="btn" data-toggle="collapse" data-target="#dogs">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="dogs" class="collapse">
+        <p></p>
+        <p>The pairwise influence matrix of Dobrushin has long been used as an analytical tool to bound the rate of convergence of Gibbs sampling. In this work, we use Dobrushin influence as the basis of a practical tool to certify and efficiently improve the quality of a discrete Gibbs sampler. Our Dobrushin-optimized Gibbs samplers (DoGS) offer customized variable selection orders for a given sampling budget and variable subset of interest, explicit bounds on total variation distance to stationarity, and certifiable improvements over the standard systematic and uniform random scan Gibbs samplers. In our experiments with joint image segmentation and object recognition, Markov chain Monte Carlo maximum likelihood estimation, and Ising model inference, DoGS consistently deliver higher-quality inferences with significantly smaller sampling budgets than standard Gibbs samplers.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Predicting Patient "Cost Blooms" in Denmark: A Longitudinal Population-based Study.  (<a href="papers/costblooms-bmj17.pdf">pdf</a>, <a href="papers/costblooms-bmj17.bib">bib</a>)</b>
+        <br /><i>Suzanne Tamang, Arnold Milstein, Henrik Toft Sorensen, Lars Pedersen, Lester Mackey, Jean-Raymond Betterton, Lucas Janson, and Nigam Shah.</i>
+        <br />BMJ Open.  January 2017.
+        <br/><a class="btn" data-toggle="collapse" data-target="#denmark">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="denmark" class="collapse">
+        <p></p>
+        <p>
+        <b>Objectives:</b> To compare the ability of standard vs. enhanced models to predict future high-cost
+        patients, especially those who move from a lower to the upper decile of per capita healthcare
+        expenditures within one year - i.e., "cost bloomers."
+        <br/><b>Design:</b> We developed alternative models to predict being in the upper decile of healthcare
+        expenditures in Year 2 of a sample, based on data from Year 1. Our six alternative models
+        ranged from a standard cost-prediction model with four variables (i.e., traditional model
+        features), to our largest enhanced model with 1,053 nontraditional model features. To quantify
+        any increases in predictive power that enhanced models achieved over standard tools, we
+        compared the prospective predictive performance of each model.
+        <br/><b>Participants and setting:</b> We used the population of Western Denmark between 2004 and 2011
+        (2,146,801 individuals) to predict future high-cost patients and examine characteristics of high-cost cohorts. Using the most recent two-year period (2010-11) for model evaluation, our whole-population model used a cohort of 1,557,950 individuals with a full year of active residency Year
+        1 (2010). Our cost-bloom model excluded the 155,795 individuals who were already high cost at
+        the population level in Year 1, resulting in 1,402,155 individuals for prediction of cost bloomers
+        in Year 2 (2011).
+        <br/><b>Primary outcome measures:</b> Using unseen data from a future year, we evaluated each model's
+        prospective predictive performance by calculating the ratio of predicted high-cost patient
+        expenditures to the actual high-cost patient expenditures in Year 2 - i.e., cost capture.
+        <br/><b>Results:</b> Our best enhanced model achieved a 21 percent and 30 percent improvement in cost
+        capture over a standard diagnosis-based model for predicting population-level high-cost patients
+        and cost bloomers, respectively.
+        <br/><b>Conclusions:</b> In combination with modern statistical learning methods for analyzing large
+        datasets, models enhanced with a large and diverse set of features led to better
+        performance, especially for predicting future cost bloomers.
+        </p>
+        </div>
+        </li>
+        <br />
+        <li><b>Predicting inpatient clinical order patterns with probabilistic topic models vs. conventional order sets.  (<a href="papers/clinicallda-jamia16.pdf">pdf</a>, <a href="papers/clinicallda-jamia16.bib">bib</a>)</b>
+        <br /><i>Jonathan H. Chen, Mary K. Goldstein, Steven M. Asch, Lester Mackey, and Russ B. Altman.</i>
+        <br />Journal of the American Medical Informatics Association.  September 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#clinicallda">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="clinicallda" class="collapse">
+        <p></p>
+        <p>
+        <b>Objective</b> Build probabilistic topic model representations of hospital admissions processes and compare the ability of such models to predict clinical order patterns as compared to preconstructed order sets.
+        <br/><b>Materials and Methods</b> The authors evaluated the first 24 hours of structured electronic health record data for > 10 K inpatients. Drawing an analogy between structured items (e.g., clinical orders) to words in a text document, the authors performed latent Dirichlet allocation probabilistic
+        topic modeling. These topic models use initial clinical information to predict clinical orders for a separate validation set of > 4 K patients. The authors evaluated these topic model-based predictions vs existing human-authored order sets by area under the receiver operating characteristic curve, precision, and recall for subsequent clinical orders.
+        <br/><b>Results</b> Existing order sets predict clinical orders used within 24 hours with area under the receiver operating characteristic curve 0.81, precision 16%, and recall 35%. This can be improved to 0.90, 24%, and 47% by using probabilistic topic models to summarize clinical data into up to 32 topics. Many of these latent topics yield natural clinical interpretations (e.g., "critical care," "pneumonia," "neurologic evaluation").
+        <br/><b>Discussion</b> Existing order sets tend to provide nonspecific, process-oriented aid, with usability limitations impairing more precise, patient-focused support. Algorithmic summarization has the potential to breach this usability barrier by automatically inferring patient context, but with potential tradeoffs in interpretability.
+        <br/><b>Conclusion</b> Probabilistic topic modeling provides an automated approach to detect thematic trends in patient care and generate decision support content. A potential use case finds related clinical orders for decision support.
+        </p>
+        </div>
+        </li>
+        <br />
+        <li><b>Image Processing, Computer Vision, and Deep Learning: new approaches to the analysis and physics interpretation of LHC events. (<a href="https://iopscience.iop.org/article/10.1088/1742-6596/762/1/012035">article</a>)</b>
+        <br /><i>Ariel Schwartzman, Michael Kagan, Lester Mackey, Benjamin Nachman, and Luke de Oliveira.</i>
+        <br />Journal of Physics: Conference Series.  October 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#lhc">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="lhc" class="collapse">
+        <p></p>
+        <p>This review introduces recent developments in the application of image processing, computer vision, and deep neural networks to the analysis and interpretation of particle collision events at the Large Hadron Collider (LHC). The link between LHC data analysis and computer vision techniques relies on the concept of jet-images, building on the notion of a particle physics detector as a digital camera and the particles it measures as images. We show that state-of-the-art image classification techniques based on deep neural network architectures significantly improve the identification of highly boosted electroweak particles with respect to existing methods. Furthermore, we introduce new methods to visualize and interpret the high level features learned by deep neural networks that provide discrimination beyond physics- derived variables, adding a new capability to understand physics and to design more powerful classification methods at the LHC.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Boosted jet tagging with jet-images and deep neural networks. (<a href="https://doi.org/10.1051/epjconf/201612700009">article</a>)</b>
+        <br /><i>Michael Kagan, Luke de Oliveira, Lester Mackey, Benjamin  Nachman, and Ariel Schwartzman.</i>
+        <br />EPJ Web of Conferences.  November 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#jettag">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="jettag" class="collapse">
+        <p></p>
+        <p>Building on the jet-image based representation of high energy jets, we develop computer vision based techniques for jet tagging through the use of deep neural networks. Jet-images enabled the connection between jet substructure and tagging with the fields of computer vision and image processing. We show how applying such techniques using deep neural networks can improve the performance to identify highly boosted W bosons with respect to state-of-the-art substructure methods. In addition, we explore new ways to extract and visualize the discriminating features of different classes of jets, adding a new capability to understand the physics within jets and to design more powerful jet tagging methods.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Efron-Stein Inequalities for Random Matrices. (<a href="papers/matefronstein-aop16.pdf">pdf</a>, <a href="papers/matefronstein-aop16.bib">bib</a>)</b>
+        <br /><i>Daniel Paulin, Lester Mackey, and Joel A. Tropp.</i>
+        <br />Annals of Probability.  September 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#efronstein">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="efronstein" class="collapse">
+        <p></p>
+        <p>This paper establishes new concentration inequalities for random matrices constructed from independent random variables. These results are analogous with the generalized Efron-Stein inequalities developed by Boucheron et al. The proofs rely on the method of exchangeable pairs.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Multivariate Stein Factors for a Class of Strongly Log-concave Distributions. (<a href="https://arxiv.org/pdf/1512.07392.pdf">arxiv</a>, <a href="papers/concavestein-ecp16.bib">bib</a>)</b>
+        <br /><i>Lester Mackey and Jackson Gorham.</i>
+        <br />Electronic Communications in Probability.  September 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#multivariate_stein_factors">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="multivariate_stein_factors" class="collapse">
+        <p></p>
+        <p>We establish uniform bounds on the low-order derivatives of Stein equation solutions for a broad class of multivariate, strongly log-concave target distributions. These "Stein factor" bounds deliver control over Wasserstein and related smooth function distances and are well-suited to analyzing the computable Stein discrepancy measures of Gorham and Mackey. Our arguments of proof are probabilistic and feature the synchronous coupling of multiple overdamped Langevin diffusions.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Jet-Images -- Deep Learning Edition. (<a href="papers/deepjets-jhep16.pdf">pdf</a>, <a href="https://github.com/ml-slac/deep-jets">code</a>, <a href="papers/deepjets-jhep16.bib">bib</a>)</b>
+        <br /><i>Luke de Oliveira, Michael Kagan, Lester Mackey, Benjamin Nachman, and Ariel Schwartzman.</i>
+        <br />Journal of High Energy Physics.  July 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#jetimages">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="jetimages" class="collapse">
+        <p></p>
+        <p>Building on the notion of a particle physics detector as a camera and the collimated streams of high energy particles, or jets, it measures as an image, we investigate the potential of machine learning techniques based on deep learning architectures to identify highly boosted W bosons. Modern deep learning algorithms trained on jet images can out-perform standard physically-motivated feature driven approaches to jet tagging. We develop techniques for visualizing how these features are learned by the network and what additional information is used to improve performance. This interplay between physically-motivated feature driven tools and supervised learning algorithms is general and can be used to significantly increase the sensitivity to discover new particles and new forces, and gain a deeper understanding of the physics within jets.</p>
+        </div>
+        <p />
+        </li>
+        <li><b>Fuzzy Jets. (<a href="papers/fuzzyjets-jhep16.pdf">pdf</a>, <a href="https://github.com/chstan/FuzzyJets">code</a>, <a href="papers/fuzzyjets-jhep16.bib">bib</a>)</b>
+        <br /><i>Lester Mackey, Benjamin Nachman, Ariel Schwartzman, and Conrad Stansbury.</i>
+        <br />Journal of High Energy Physics.  June 2016.
+        <br/><a class="btn" data-toggle="collapse" data-target="#fuzzyjets">View details &raquo</a>
+        <!--colapsed text-->
+        <div id="fuzzyjets" class="collapse">
+        <p></p>
+        <p>Collimated streams of particles produced in high energy physics experiments
+        are organized using clustering algorithms to form jets. To construct jets, the experimental
+        collaborations based at the Large Hadron Collider (LHC) primarily use agglomerative hierarchical
+        clustering schemes known as sequential recombination. We propose a new class
+        of algorithms for clustering jets that use infrared and collinear safe mixture models. These
+        new algorithms, known as fuzzy jets, are clustered using maximum likelihood techniques
+        and can dynamically determine various properties of jets like their size. We show that the
+        fuzzy jet size adds additional information to conventional jet tagging variables. Furthermore,
+        we study the impact of pileup and show that with some slight modifications to the
+        algorithm, fuzzy jets can be stable up to high pileup interaction multiplicities.</p>
+        </div>
+        <p />
+        </li>
+                    <li><b>Measuring Sample Quality with Stein's Method. (<a href="https://arxiv.org/pdf/1506.03039.pdf">arxiv</a>, <a href="papers/steindiscrepancy-nips15-poster.pdf">poster</a>, <a href="https://jgorham.github.io/SteinDiscrepancy.jl/">code</a>, <a href="papers/steindiscrepancy-nips15.bib">bib</a>)</b>
+                <br /><i>Jackson Gorham and Lester Mackey.</i>
+                <br />Advances in Neural Information Processing Systems (NeurIPS).  December 2015.
+                <br/><a class="btn" data-toggle="collapse" data-target="#stein_discrepancy">View details &raquo</a>
+                    <div id="stein_discrepancy" class="collapse">
+                    <p></p>
+                    <p>To improve the efficiency of Monte Carlo estimation, practitioners are turning to biased Markov chain Monte Carlo procedures that trade off asymptotic exactness for computational speed. The reasoning is sound: a reduction in variance due to more rapid sampling can outweigh the bias introduced. However, the inexactness creates new challenges for sampler and parameter selection, since standard measures of sample quality like effective sample size do not account for asymptotic bias. To address these challenges, we introduce a new computable quality measure based on Stein's method that quantifies the maximum discrepancy between sample and target expectations over a large class of test functions. We use our tool to compare exact, biased, and deterministic sample sequences and illustrate applications to hyperparameter selection, convergence rate assessment, and quantifying bias-variance tradeoffs in posterior inference.</p>
+                    </div>
+                    </li>
+                    <br />
+             <li><b>Weighted Classification Cascades for Optimizing Discovery Significance in the HiggsML Challenge. (<a href="papers/cascades-nipshepml14.pdf">pdf</a>, <a href="papers/cascades-nipshepml14.bib">bib</a>)</b>
+                <br /><i>Lester Mackey, Jordan Bryan, and Man Yue Mo.</i>
+		<br/>Proceedings of the NeurIPS Workshop on High Energy Physics, Machine Learning, and the HiggsML Data Challenge.  August 2015.
+        <br/><a class="btn" data-toggle="collapse" data-target="#cascades">View details &raquo</a>
+            <!--colapsed text-->
+            <div id="cascades" class="collapse">
+            <p></p>
+            <p>We introduce a minorization-maximization approach to optimizing common measures of discovery significance in high energy physics. The approach alternates between solving a weighted binary classification problem and updating class weights in a simple, closed-form manner. Moreover, an argument based on convex duality shows that an improvement in weighted classification error on any round yields a commensurate improvement in discovery significance. We complement our derivation with experimental results from the 2014 Higgs boson machine learning challenge.</p>
+            </div>
+              </li>
+	      <br />
+              <li><b>Distributed Matrix Completion and Robust Factorization. (<a href="papers/dmcrf-jmlr15.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'dmcrf-jmlr15.pdf']);">pdf</a>, <a href="https://www.cs.ucla.edu/~ameet/dfc/" onClick="_gaq.push(['_trackEvent', 'Website', 'Link', 'https://www.cs.ucla.edu/~ameet/dfc/']);">website</a>, <a href="https://www.cs.ucla.edu/~ameet/dfc/" onClick="_gaq.push(['_trackEvent', 'Code', 'Download', 'https://www.cs.ucla.edu/~ameet/dfc/']);">code</a>, <a href="papers/dmcrf-jmlr15.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'dmcrf-jmlr15.bib']);">bib</a>)</b>
+		<br /><i>Lester Mackey, Ameet Talwalkar, and Michael I. Jordan.</i>
+		<br />Journal of Machine Learning Research.  April 2015.</li>
+              <br />
+              <li><b>Crowdsourced analysis of clinical trial data to predict amyotrophic lateral sclerosis progression. (<a href="papers/als-nbt14.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'als-nbt14.pdf']);">pdf</a>, <a href="https://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3051.html" onClick="_gaq.push(['_trackEvent', 'Website', 'Link', 'https://doi.org/10.1038/nbt.3051']);">article</a>, <a href="papers/als-nbt14.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'als-nbt14.bib']);">bib</a>)</b>
+                <br /><i>Robert Kuffner, Neta Zach, Raquel Nore, Johann Hawe, David Schoenfeld, Liuxia Wang, Guang Li, Lilly Fang, Lester Mackey, Orla Hardiman, Merit Cudkowicz, Alexander Sherman, Gokhan Ertaylan, Moritz Grosse-Wentrup, Torsten Hothorn, Jules van Ligtenberg, Jakob H. Macke, Timm Meyer, Bernhard Scholkopf, Linh Tran, Rubio Vaughan, Gustavo Stolovitzky, and Melanie L. Leitner.</i>
+                <br />Nature Biotechnology. November 2014.</li>
+              <ul class="normal">
+                <li><a href="https://stm.sciencemag.org/content/6/264/264ec204.full">Editor's choice</a> for Science Translational Medicine, November 2014.</li>
+              </ul>
+              <br />
+              <li><b>Combinatorial Clustering and the Beta Negative Binomial Process. (<a href="papers/bnbp-tpami14.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'bnbp-tpami14.pdf']);">pdf</a>, <a href="code/BNBP_code.zip"  onClick="_gaq.push(['_trackEvent', 'Code', 'Download', 'BNBP_code.zip']);">code</a>, <a href="papers/bnbp-tpami14.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'bnbp-tpami14.bib']);">bib</a>)</b>
+		<br /><i>Tamara Broderick, Lester Mackey, John Paisley, and Michael I. Jordan.</i>
+		<br />IEEE Transactions on Pattern Analysis and Machine Intelligence.  April 2014.</li>
+	      <br />
+	      <li><b>Matrix Concentration Inequalities via the Method of Exchangeable Pairs. (<a href="papers/matstein-aop14.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'matstein-aop14.pdf']);">pdf</a>, <a href="papers/matstein-aop14.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'matstein-aop14.bib']);">bib</a>, <a href="https://simons.berkeley.edu/talks/joel-tropp-2013-09-03c" onClick="_gaq.push(['_trackEvent', 'Talk', 'Link', 'https://simons.berkeley.edu/talks/joel-tropp-2013-09-03c']);">Joel Tropp's talk</a>)</b>
+		<br /><i>Lester Mackey, Michael I. Jordan, Richard Y. Chen, Brendan Farrell, and Joel A. Tropp.</i>
+		<br />Annals of Probability.  March 2014.</li>
+	      <br />
+	      <li><b>Corrupted Sensing: Novel Guarantees for Separating Structured Signals. (<a href="papers/corrupted_sensing-ieee14.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'corrupted_sensing-ieee14.pdf']);">pdf</a>, <a href="papers/corrupted_sensing-ieee14.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'corrupted_sensing-ieee14.bib']);">bib</a>)</b>
+		<br /><i>Rina Foygel and  Lester Mackey.</i>
+	        <br />IEEE Transactions on Information Theory.  February 2014.</li>
+	      <br />
+              <li><b>Distributed Low-rank Subspace Segmentation. (<a href="papers/lrr-iccv13.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'lrr-iccv13.pdf']);">pdf</a>, <a href="code/lrr-iccv13-code.tar.gz"  onClick="_gaq.push(['_trackEvent', 'Code', 'Download', 'lrr-iccv13-code.tar.gz']);">code</a>, <a href="papers/lrr-iccv13.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'lrr-iccv13.bib']);">bib</a>)</b>  
+                <br /><i>Ameet Talwalkar, Lester Mackey, Yadong Mu, Shih-Fu Chang, and Michael I. Jordan.</i>
+                <br />IEEE International Conference on Computer Vision (ICCV).  December 2013.</li>
+              <br />
+	      <li><b>The Asymptotics of Ranking Algorithms. (<a href="papers/rankasymptotics-aos13.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'rankasymptotics-aos13.pdf']);">pdf</a>, <a href="papers/rankasymptotics-aos13.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'rankasymptotics-aos13.bib']);">bib</a>)</b>
+		<br /><i>John C. Duchi, Lester Mackey, and Michael I. Jordan.</i>
+		<br />Annals of Statistics.  November 2013.</li>
+	      <br />
+	      <li><b>Joint Link Prediction and Attribute Inference using a Social-Attribute Network. (<a href="papers/san-tist13.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'san-tist13.pdf']);">pdf</a>, <a href="https://people.duke.edu/~zg70/gplus.html" onClick="_gaq.push(['_trackEvent', 'Dataset', 'Download', 'https://home.engineering.iastate.edu/~neilgong/dataset.html']);">website</a>, <a href="papers/san-tist13.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'san-tist13.bib']);">bib</a>)</b>
+                <br /><i>Neil Zhenqiang Gong, Ameet Talwalkar, Lester Mackey, Ling Huang, Eui Chul Richard Shin, Emil Stefanov, Elaine (Runting) Shi, and Dawn Song</i>.
+                <br />ACM Transactions on Intelligent Systems and Technology.  March 2013.</li>
+	      <br />
+              <li><b>Divide-and-Conquer Matrix Factorization. (<a href="papers/dfc-nips11.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'dfc-nips11.pdf']);">pdf</a>, <a href="https://www.cs.ucla.edu/~ameet/dfc/" onClick="_gaq.push(['_trackEvent', 'Website', 'Link', 'https://www.cs.ucla.edu/~ameet/dfc/']);">website</a>, <a href="https://www.cs.ucla.edu/~ameet/dfc/" onClick="_gaq.push(['_trackEvent', 'Code', 'Download', 'https://www.cs.ucla.edu/~ameet/dfc/']);">code</a>, 
+		  <a href="papers/dfc-nips11.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'dfc-nips11.bib']);">bib</a>)</b>  
+                <br /><i>Lester Mackey, Ameet Talwalkar, and Michael I. Jordan.</i>
+                <br />Advances in Neural Information Processing Systems (NeurIPS).  December 2011.</li>
+              <br />
+              <li><b>Visually Relating Gene Expression and in vivo DNA Binding Data. (<a href="papers/visgene-bibm11.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'visgene-bibm11.pdf']);">pdf</a>, <a href="papers/visgene-bibm11.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'visgene-bibm11.bib']);">bib</a>)</b>  
+                <br /><i>Min-Yu Huang, Lester Mackey, Soile Keranen, Gunther Weber, Michael Jordan, David Knowles, Mark Biggin, and Bernd Hamann</i>.
+                <br />IEEE International Conference on Bioinformatics and Biomedicine (BIBM).  November 2011.</li>
+              <br />
+              <li><b>Mixed Membership Matrix Factorization. (<a href="papers/m3f-icml10.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'm3f-icml10.pdf']);">pdf</a>, <a href="papers/m3f-icml10-suppinfo.pdf"  onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'm3f-icml10-suppinfo.pdf']);">supp info</a>, <a href="papers/m3f-icml10-slides.pdf"  onClick="_gaq.push(['_trackEvent', 'Slides', 'Download', 'm3f-icml10-slides.pdf']);">slides</a>, <a href="https://code.google.com/archive/p/m3f/" onClick="_gaq.push(['_trackEvent', 'Code', 'Link', 'm3f-icml10-code']);">code</a>, <a href="papers/m3f-icml10.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'm3f-icml10.bib']);">bib</a>)</b>
+                <br /><i>Lester Mackey, David Weiss, and Michael I. Jordan</i>.
+                <br />International Conference on Machine Learning (ICML).  June 2010.
+                <br />Handbook of Mixed Membership Models and Their Applications.  November 2014.</li>
+              <br />
+              <li><b>On the Consistency of Ranking Algorithms. (<a href="papers/rankconsistency-icml10.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'rankconsistency-icml10.pdf']);">pdf</a>, <a href="papers/rankconsistency-icml10-slides.pdf" onClick="_gaq.push(['_trackEvent', 'Slides', 'Download', 'rankconsistency-icml10-slides.pdf']);">slides</a>, <a href="papers/rankconsistency-icml10.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'rankconsistency-icml10.bib']);">bib</a>)</b>
+                <br /><i>John Duchi, Lester Mackey, and Michael I. Jordan</i>.
+                <br />International Conference on Machine Learning (ICML).  June 2010.
+		<ul class="normal">
+		  <li>Winner of the ICML 2010 Best Student Paper Award.</li>
+		</ul>
+	      </li>
+              <br />
+              <li><b>Deflation Methods for Sparse PCA. (<a href="papers/deflation-nips08.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'deflation-nips08.pdf']);">pdf</a>, <a href="papers/deflation-nips08-poster.pdf"  onClick="_gaq.push(['_trackEvent', 'Posters', 'Download', 'deflation-nips08-poster.pdf']);">poster</a>, <a href="code/deflation-nips08-code.zip"  onClick="_gaq.push(['_trackEvent', 'Code', 'Download', 'deflation-nips08-code.zip']);">code</a>, <a href="papers/deflation-nips08.bib"  onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'deflation-nips08.bib']);">bib</a>)</b>  
+                <br /><i>Lester Mackey</i>.
+                <br />Advances in Neural Information Processing Systems (NeurIPS).  December 2008.</li>
+              <br />
+	      <li><b>Fault-tolerant Typed Assembly Language. (<a href="papers/ftal-pldi07.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'ftal-pldi07.pdf']);">pdf</a>, <a href="papers/ftal-pldi07.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'ftal-pldi07.bib']);">bib</a>)</b>  
+		<br/><i>Frances Perry, Lester Mackey, George A. Reis, Jay Ligatti, David I. August, and David Walker</i>.
+		<br/>ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI).  June 2007.</li>
+	      <ul class="normal">
+		<li>Joint winner of the PLDI 2007 Best Paper Award.</li>
+		<li>Selected for <a href="https://www.sigplan.org/CACMPapers.htm">SIGPLAN CACM Research Highlights</a>, September 2008.</li>
+	      </ul>
+	      <br />
+	      <li><b>Static Typing for a Faulty Lambda Calculus. (<a href="papers/lambdazap-icfp06.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'lambdazap-icfp06.pdf']);">pdf</a>, <a href="papers/lambdazap-icfp06.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'lambdazap-icfp06.bib']);">bib</a>)</b>  
+		<br/><i>David Walker, Lester Mackey, Jay Ligatti, George Reis, and David August</i>.
+		<br/>ACM SIGPLAN International Conference on Functional Programming (ICFP).  September 2006.</li>
+	      <br />
+	      <li><b>Participatory Design with Proxies: Developing a Desktop-PDA System to Support People with Aphasia. (<a href="papers/esiplannerii-chi06.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'esiplannerii-chi06.pdf']);">pdf</a>, <a href="papers/esiplannerii-chi06.bib" onClick="_gaq.push(['_trackEvent', 'Bib', 'Download', 'esiplannerii-chi06.bib']);">bib</a>)</b> 
+		<br/><i>Jordan Boyd-Graber, Sonya Nikolova, Karyn Moffatt, Kenrick Kin, Joshua Lee, Lester Mackey, Marilyn Tremaine, and Maria Klawe</i>.
+		<br/>SIGCHI Conference on Human Factors in Computing Systems (CHI).  April 2006.</li>
+	    </ul>
+	  </div>
+          <div class="divider1"></div>
+          <h4>Other Work</h4>
+          <div class="contentarea">
+            <ul class="normal">
+              <li><b>Deriving Matrix Concentration Inequalities from Kernel Couplings. (<a href="https://arxiv.org/pdf/1305.0612.pdf" onClick="_gaq.push(['_trackEvent', 'arxiv', 'Link', 'https://arxiv.org/pdf/1305.0612.pdf']);">arxiv</a>)</b>
+                <br /><i>Daniel Paulin, Lester Mackey, and Joel A. Tropp. May 2013</i></li>
+              <br />
+              <li><b>Feature-Weighted Linear Stacking. (<a href="https://arxiv.org/pdf/0911.0460.pdf" onClick="_gaq.push(['_trackEvent', 'arxiv', 'Link', 'https://arxiv.org/pdf/0911.0460.pdf']);">arxiv</a>, <a href="https://youtu.be/coeak1YsaYc">Joe Sill's talk</a>)</b>
+                <br/><i>Joint work with Joe Sill, Gabor Takacs, and David Lin. November 2009.</i></li>
+              <br />
+              <li><b>Anomaly Detection for Asynchronous and Incomplete Data. (<a href="papers/anomaly-cs262a08.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'dkm-cs281b08.pdf']);">pdf</a>)</b>
+                <br/><i>Joint work with John Duchi and Fabian Wauthier.</i>
+                <br/>Advanced Topics in Computer Systems (UC Berkeley CS 262A, E. Brewer). December 2008.</li>
+              <br />
+              <li><b>Scalable Dyadic Kernel Machines.  (<a href="papers/dkm-cs281b08.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'dkm-cs281b08.pdf']);">pdf</a>)</b>
+                <br/>Advanced Topics in Learning and Decision Making (UC Berkeley CS 281B, P. Bartlett). May 2008.</li>
+              <br />
+              <li><b>Latent Dirichlet Markov Random Fields for Semi-supervised Image Segmentation and Object Recognition. (<a href="papers/ldmrf-cs281a07.pdf" onClick="_gaq.push(['_trackEvent', 'Papers', 'Download', 'ldmrf-cs281a07.pdf']);">pdf</a>)</b>
+                <br/>Statistical Learning Theory (UC Berkeley CS 281A, M. Jordan) and Computer Vision (UC Berkeley CS 280, J. Malik). December 2007.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="endpadding">
+      </div>
+
+      <div id="footer">
+	<div class="left">&copy; 2007 Lester Mackey. All rights reserved.</div>
+	<div class="right">Design by <a href="https://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+      </div>
+      
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
