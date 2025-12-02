@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule (.*) https://web.stanford.edu/class/archive/stats/stats300a/stats300a.1162/$1
