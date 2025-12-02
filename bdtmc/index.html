@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Lester Mackey: BDTMC</title>
+<meta name="keywords" content="lester mackey, computer science, machine learning, statistical, research, berkeley, BDTMC" />
+<meta name="description" content="Lester Mackey's BDTMC Project Page" />
+<!-- <link rel="stylesheet" type="text/css" href="default.css" />-->
+</head>
+<body>
+
+<div id="upbg"></div>
+
+<div id="outer">
+
+
+	<div id="header">
+		<div id="headercontent">
+			<h1>Berkeley Drosophila Transcription Modeling Center</h1>
+			<!--<h2>Personal homepage</h2>-->
+		</div>
+	</div>
+
+<!--
+A search tool
+	<form method="post" action="">
+		<div id="search">
+			<input type="text" class="text" maxlength="64" name="keywords" />
+			<input type="submit" class="submit" value="Search" />
+		</div>
+	</form>
+-->
+
+	<div id="headerpic"></div>
+
+	
+	<div id="menu">
+		<!-- HINT: Set the class of any menu link below to "active" to make it appear active -->
+		<!--
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="research.html" class="active">Research</a></li>
+			<li><a href="dinosaurplanet.html">Netflix Prize</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		-->
+	</div>
+	<div id="menubottom"></div>
+
+	
+	<div id="content">
+
+		<!-- Normal content: Stuff that's not going to be put in the left or right column. -->
+		<div id="normalcontent">
+			<h3>BDTMC Projects</h3>
+			<div class="contentarea">
+				<ul class="normal">
+				    <li><a href = "#pointcloud_analysis">PointCloud Analysis</a></li>
+				</ul>
+			</div>
+		        <div class="divider1"></div>
+			<h3><a name="pointcloud_analysis"></a>PointCloud Analysis</h3>
+			<div class="contentarea">
+			        <ul class="normal">
+				<li>Virtual PointClouds (best viewed with <a href="http://bdtnp.lbl.gov/Fly-Net/bioimaging.jsp?w=pcx">PointCloudXplore</a>)
+				        <ul class="normal">
+					<li><a href = "pointcloud_analysis/vpcs/original">Original</a></li>
+					<li><a href = "pointcloud_analysis/vpcs/pca">Transformed</a> with PCA</li>
+					<li><a href = "pointcloud_analysis/vpcs/dspca_hd">Transformed</a> with DSPCA with Hotelling deflation(<a href="http://www.princeton.edu/~aspremon/sparsesvd.pdf">paper</a>, <a href="http://www.princeton.edu/~aspremon/DSPCA.htm">code</a>)
+					        <ul class="normal">
+						<li>Note: DSPCA files are named according to their sparsity (or rho) parameters.  Hence, the names associated with a DSPCA run with rho = 100 contain the string "_DSPCA100.000".</li> 
+						</ul>
+					</li>
+					<li><a href = "pointcloud_analysis/vpcs/dspca_ghd">Transformed</a> with DSPCA with Generalized Hotelling deflation</li>
+					</ul>
+				</li>
+				<li>Sparse PCA Vectors and Pseudo-eigenvalues (Matlab .MAT files)
+				        <ul class="normal">
+					<li><a href = "pointcloud_analysis/eigen/pca">PCA</a></li>
+					<li><a href = "pointcloud_analysis/eigen/dspca_hd">DSPCA with HD</a></li>
+					<li><a href = "pointcloud_analysis/eigen/dspca_ghd">DSPCA with GHD</a></li>
+					</ul>
+				</li>
+				<li>
+				        Scatter Plots
+				        <ul class="normal">
+					<li>
+					        <a href = "pointcloud_analysis/images/original/scatter">Gene-gene plots</a> of original VPCs
+					        <br /><img src="pointcloud_analysis/images/original/scatter/0-3_1160524183713_s10436-29ap05-02_scatter.png" alt="Sample original VPC scatter plot" width="80%" height="80%" />
+					</li>
+					<li>
+					        <a href = "pointcloud_analysis/images/pca/scatter">Component-component plots</a> of PCA VPCs
+					        <br /><img src="pointcloud_analysis/images/pca/scatter/0-3_1160524183713_s10436-29ap05-02_PCA_scatter.png"  alt="Sample PCA VPC scatter plot" width="80%" height="80%" />
+					</li>
+					<li>
+					        <a href = "pointcloud_analysis/images/dspca_hd/scatter">Component-component plots</a> of DSPCA with HD VPCs
+					        <br /><img src="pointcloud_analysis/images/dspca_hd/scatter/0-3_1160524183713_s10436-29ap05-02_DSPCA100.000_scatter.png"  alt="Sample DSPCA VPC scatter plot" width="80%" height="80%" />
+					</li>
+					<li>
+					        <a href = "pointcloud_analysis/images/dspca_ghd/scatter">Component-component plots</a> of DSPCA with GHD VPCs
+					</li>
+					</ul>
+				</li>
+				<li>
+				        Vector Analysis
+				        <ul class="normal">
+					<li>
+					        Explained variance plots
+						<ul class="normal">
+						<li><a href = "pointcloud_analysis/images/pca/variance">PCA</a></li>
+						<li>
+						        <a href = "pointcloud_analysis/images/dspca_hd/variance">DSPCA with HD</a>
+							<br /><img src="pointcloud_analysis/images/dspca_hd/variance/0-3_1160524183713_s10436-29ap05-02_DSPCA100.000_var.png"  alt="Sample plot of DSPCA explained variance" width=50%" height="50%" />
+						</li>
+						<li><a href = "pointcloud_analysis/images/dspca_ghd/variance">DSPCA with GHD</a></li>
+						</ul>					        
+					</li>
+					<li>
+					        Cumulative explained variance plots
+						<ul class="normal">
+						<li><a href = "pointcloud_analysis/images/pca/cumvariance">PCA</a></li>
+						<li>
+						        <a href = "pointcloud_analysis/images/dspca_hd/cumvariance">DSPCA with HD</a>
+							<br /><img src="pointcloud_analysis/images/dspca_hd/cumvariance/0-3_1160524183713_s10436-29ap05-02_DSPCA100.000_cumvar.png"  alt="Sample plot of DSPCA cumulative explained variance" width="50%" height="50%" />
+						</li>
+						<li><a href = "pointcloud_analysis/images/dspca_ghd/cumvariance">DSPCA with GHD</a></li>
+						</ul>
+					</li>
+					<li>
+					        Vector cardinality (sparseness) charts
+						<ul class="normal">
+						<li><a href = "pointcloud_analysis/images/pca/cardinality">PCA</a></li>
+						<li>
+						        <a href = "pointcloud_analysis/images/dspca_hd/cardinality">DSPCA with HD</a>
+							<br /><img src="pointcloud_analysis/images/dspca_hd/cardinality/0-3_1160524183713_s10436-29ap05-02_DSPCA100.000_cardin.png"  alt="Sample chart of DSPCA vector cardinality" width="50%" height="50%" />
+						</li>
+						<li><a href = "pointcloud_analysis/images/dspca_ghd/cardinality">DSPCA with GHD</a></li>
+						</ul>
+					</li>
+					<li>
+					        Genes contributing to each principal component
+						<ul class="normal">
+						<li><a href = "pointcloud_analysis/images/pca/support">PCA</a></li>
+						<li>
+						        <a href = "pointcloud_analysis/images/dspca_hd/support">DSPCA with HD</a>
+							<br /><img src="pointcloud_analysis/images/dspca_hd/support/0-3_1160524183713_s10436-29ap05-02_DSPCA100.000_support.png"  alt="Sample plot of DSPCA gene support" width="50%" height="50%" />
+						</li>
+						<li><a href = "pointcloud_analysis/images/dspca_ghd/support">DSPCA with GHD</a></li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				<li>
+				        Cardinality Path Analysis
+				        <ul class="normal">
+					<li>
+					        Cardinality path plots
+						<ul class="normal">
+						<li>
+						        <a href = "pointcloud_analysis/images/gspca/cardpath">GSPCA</a>
+							<br /><img src="pointcloud_analysis/images/gspca/cardpath/0-3_1160524183713_s10436-29ap05-02_GSPCA_cardpath.png"  alt="Sample plot of GSPCA cardinality path" width=50%" height="50%" />
+						</li>
+						</ul>					        
+					</li>
+					<li>
+					        Cardinality vs. variance plots
+						<ul class="normal">
+						<li>
+						        <a href = "pointcloud_analysis/images/gspca/cardvar">GSPCA</a>
+							<br /><img src="pointcloud_analysis/images/gspca/cardvar/0-3_1160524183713_s10436-29ap05-02_GSPCA_cardvar.png"  alt="Sample plot of GSPCA component cardinality vs. variance" width=50%" height="50%" />
+						</li>
+						</ul>					        
+					</li>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Some extra padding at the end -->
+	<div id="endpadding">
+	</div>
+	
+	<!--
+	<div id="footer">
+			<div class="left">&copy; 2007 Lester Mackey. All rights reserved.</div>
+			<div class="right">Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+	</div>
+	-->
+</div>
+
+</body>
+</html>
