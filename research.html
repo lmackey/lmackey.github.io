@@ -185,7 +185,7 @@
               <div id="alphamaml" class="collapse">
               <p></p>
               <p>
-    Meta-learning leverages related source tasks to learn an initialization that can be quickly fine-tuned to a target task with limited labeled examples. However, many popular meta-learning algorithms, such as model-agnostic meta-learning (MAML), only assume access to the target samples for fine-tuning. In this work, we provide a general framework for meta-learning based on weighting the loss of different source tasks, where the weights are allowed to depend on the target samples. In this general setting, we provide upper bounds on the distance of the weighted empirical risk of the source tasks and expected target risk in terms of an integral probability metric (IPM) and Rademacher complexity, which apply to a number of meta-learning settings including MAML and a weighted MAML variant. We then develop a learning algorithm based on minimizing the error bound with respect to an empirical IPM, including a weighted MAML algorithm, &alpha;-MAML. Finally, we demonstrate empirically on several regression problems that our weighted meta-learning algorithm is able to find better initializations than uniformly-weighted meta-learning algorithms, such as MAML.
+              Meta-learning leverages related source tasks to learn an initialization that can be quickly fine-tuned to a target task with limited labeled examples. However, many popular meta-learning algorithms, such as model-agnostic meta-learning (MAML), only assume access to the target samples for fine-tuning. In this work, we provide a general framework for meta-learning based on weighting the loss of different source tasks, where the weights are allowed to depend on the target samples. In this general setting, we provide upper bounds on the distance of the weighted empirical risk of the source tasks and expected target risk in terms of an integral probability metric (IPM) and Rademacher complexity, which apply to a number of meta-learning settings including MAML and a weighted MAML variant. We then develop a learning algorithm based on minimizing the error bound with respect to an empirical IPM, including a weighted MAML algorithm, &alpha;-MAML. Finally, we demonstrate empirically on several regression problems that our weighted meta-learning algorithm is able to find better initializations than uniformly-weighted meta-learning algorithms, such as MAML.
               </p>
               </div>
               <p />
@@ -197,8 +197,8 @@
               <div id="ganmc" class="collapse">
               <p></p>
               <p>
-    More accurate machine learning models often demand more computation and memory at test time, making them difficult to deploy on CPU- or memory-constrained devices. Teacher-student compression (TSC), also known as distillation, alleviates this burden by training a less expensive student model to mimic the expensive teacher model while maintaining most of the original accuracy. However, when fresh data is unavailable for the compression task, the teacher's training data is typically reused, leading to suboptimal compression. In this work, we propose to augment the compression dataset with synthetic data from a generative adversarial network (GAN) designed to approximate the training data distribution. Our GAN-assisted TSC (GAN-TSC) significantly improves student accuracy for expensive models such as large random forests and deep neural networks on both tabular and image datasets. Building on these results, we propose a comprehensive metric---the TSC Score---to evaluate the quality of synthetic datasets based on their induced TSC performance. The TSC Score captures both data diversity and class affinity, and we illustrate its benefits over the popular Inception Score in the context of image classification.
-  </p>
+              More accurate machine learning models often demand more computation and memory at test time, making them difficult to deploy on CPU- or memory-constrained devices. Teacher-student compression (TSC), also known as distillation, alleviates this burden by training a less expensive student model to mimic the expensive teacher model while maintaining most of the original accuracy. However, when fresh data is unavailable for the compression task, the teacher's training data is typically reused, leading to suboptimal compression. In this work, we propose to augment the compression dataset with synthetic data from a generative adversarial network (GAN) designed to approximate the training data distribution. Our GAN-assisted TSC (GAN-TSC) significantly improves student accuracy for expensive models such as large random forests and deep neural networks on both tabular and image datasets. Building on these results, we propose a comprehensive metric---the TSC Score---to evaluate the quality of synthetic datasets based on their induced TSC performance. The TSC Score captures both data diversity and class affinity, and we illustrate its benefits over the popular Inception Score in the context of image classification.
+              </p>
               </div>
               <p />
         </li>
@@ -236,7 +236,7 @@
         </li>
         <li><b>Controlling Moments with Kernel Stein Discrepancies.  (<a href="https://arxiv.org/pdf/2211.05408.pdf">arxiv</a>, <a href="https://github.com/noukoudashisoup/ksd-moment">code</a>)</b>
           <br /><i>Heishiro Kanagawa, Alessandro Barp, Arthur Gretton, and Lester Mackey.</i>
-          <br />Annals of Applied Probability. To appear.
+          <br />Annals of Applied Probability. December 2025.
           <br/><a class="btn" data-toggle="collapse" data-target="#ksdmoment">View details &raquo</a>
               <!--colapsed text-->
               <div id="ksdmoment" class="collapse">
@@ -247,6 +247,19 @@
         </div>
         <p />
         </li>
+        <li><b>Near-optimal inference in adaptive linear regression. (<a href="https://arxiv.org/pdf/2107.02266.pdf">arxiv</a>, <a href="https://github.com/KoulikBerkeley/online-debiasing/">code</a>)</b>
+          <br /><i>Koulik Khamaru, Yash Deshpande, Lester Mackey, and Martin J. Wainwright.</i>
+          <br />Annals of Statistics. December 2025.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#onlinedebias">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="onlinedebias" class="collapse">
+              <p></p>
+              <p>
+              When data is collected in an adaptive manner, even simple methods likeordinary  least  squares  can  exhibit  non-normal  asymptotic  behavior.  As  anundesirable consequence, hypothesis tests and confidence intervals based on asymptotic normality can lead to erroneous results. We propose a family ofonline debiasing estimators to correct these distributional anomalies in least squares estimation. Our proposed methods take advantage of the covariance structure present in the dataset and provide sharper estimates in directions for which more information has accrued. We establish an asymptotic normality property for our proposed online debiasing estimators under mild conditions on the data collection process and provide asymptotically exact confidence intervals. We additionally prove a minimax lower bound for the adaptive linear regression problem, thereby providing a baseline by which to compare estimators. There are various conditions under which our proposed estimators achieve the minimax lower bounds up to logarithmic factors. We demonstrate the usefulness of our theory via applications to multi-armed bandit, autoregressive time series estimation, and active learning with exploration.
+          </p>
+              </div>
+              <p />
+              </li>
         <li><b>Low-Rank Thinning.  (<a href="https://arxiv.org/pdf/2502.12063">arxiv</a>, <a href="https://github.com/microsoft/thinformer">thinformer</a>, <a href="https://github.com/microsoft/khsgd">khsgd</a>, <a href="https://github.com/microsoft/deepctt">deepctt</a>)</b>
           <br /><i>Annabelle Michael Carrell, Albert Gong, Abhishek Shetty, Raaz Dwivedi, and Lester Mackey.</i>
           <br />International Conference on Machine Learning (ICML). July 2025.  
@@ -285,19 +298,19 @@
               </div>
               <p />
               </li>
-        <li><b>Near-optimal inference in adaptive linear regression. (<a href="https://arxiv.org/pdf/2107.02266.pdf">arxiv</a>, <a href="https://github.com/KoulikBerkeley/online-debiasing/">code</a>)</b>
-          <br /><i>Koulik Khamaru, Yash Deshpande, Lester Mackey, and Martin J. Wainwright.</i>
-          <br />Annals of Statistics. To appear.  
-          <br/><a class="btn" data-toggle="collapse" data-target="#onlinedebias">View details &raquo</a>
+        <li><b>Targeted Separation and Convergence with Kernel Discrepancies.  (<a href="https://arxiv.org/pdf/2209.12835.pdf">arxiv</a>)</b>
+          <br /><i>Alessandro Barp, Carl-Johann Simon-Gabriel, Mark Girolami, and Lester Mackey.</i>
+          <br />Journal of Machine Learning Research (JMLR). December 2024.
+          <br/><a class="btn" data-toggle="collapse" data-target="#mmdksd">View details &raquo</a>
               <!--colapsed text-->
-              <div id="onlinedebias" class="collapse">
+              <div id="mmdksd" class="collapse">
               <p></p>
               <p>
-              When data is collected in an adaptive manner, even simple methods likeordinary  least  squares  can  exhibit  non-normal  asymptotic  behavior.  As  anundesirable consequence, hypothesis tests and confidence intervals based on asymptotic normality can lead to erroneous results. We propose a family ofonline debiasing estimators to correct these distributional anomalies in least squares estimation. Our proposed methods take advantage of the covariance structure present in the dataset and provide sharper estimates in directions for which more information has accrued. We establish an asymptotic normality property for our proposed online debiasing estimators under mild conditions on the data collection process and provide asymptotically exact confidence intervals. We additionally prove a minimax lower bound for the adaptive linear regression problem, thereby providing a baseline by which to compare estimators. There are various conditions under which our proposed estimators achieve the minimax lower bounds up to logarithmic factors. We demonstrate the usefulness of our theory via applications to multi-armed bandit, autoregressive time series estimation, and active learning with exploration.
+                Maximum mean discrepancies (MMDs) like the kernel Stein discrepancy (KSD) have grown central to a wide range of applications, including hypothesis testing, sampler selection, distribution approximation, and variational inference. In each setting, these kernel-based discrepancy measures are required to (i) separate a target P from other probability measures or even (ii) control weak convergence to P. In this article we derive new sufficient and necessary conditions to ensure (i) and (ii). For MMDs on separable metric spaces, we characterize those kernels that separate Bochner embeddable measures and introduce simple conditions for separating all measures with unbounded kernels and for controlling convergence with bounded kernels. We use these results on R^d to substantially broaden the known conditions for KSD separation and convergence control and to develop the first KSDs known to exactly metrize weak convergence to P. Along the way, we highlight the implications of our results for hypothesis testing, measuring and improving sample quality, and sampling with Stein variational gradient descent.
           </p>
-              </div>
-              <p />
-              </li>
+        </div>
+        <p />
+        </li>
         <li><b>Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation.  (<a href="https://arxiv.org/pdf/2310.02304.pdf">arxiv</a>, <a href="https://github.com/microsoft/stop">code</a>)</b>
           <br /><i>Eric Zelikman, Eliana Lorch, Lester Mackey, and Adam Tauman Kalai.</i>
           <br />Conference on Language Models (COLM). October 2024.  
@@ -361,19 +374,6 @@
               </div>
               <p />
               </li>
-        <li><b>Targeted Separation and Convergence with Kernel Discrepancies.  (<a href="https://arxiv.org/pdf/2209.12835.pdf">arxiv</a>)</b>
-          <br /><i>Alessandro Barp, Carl-Johann Simon-Gabriel, Mark Girolami, and Lester Mackey.</i>
-          <br />Journal of Machine Learning Research (JMLR). To appear.
-          <br/><a class="btn" data-toggle="collapse" data-target="#mmdksd">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="mmdksd" class="collapse">
-              <p></p>
-              <p>
-                Maximum mean discrepancies (MMDs) like the kernel Stein discrepancy (KSD) have grown central to a wide range of applications, including hypothesis testing, sampler selection, distribution approximation, and variational inference. In each setting, these kernel-based discrepancy measures are required to (i) separate a target P from other probability measures or even (ii) control weak convergence to P. In this article we derive new sufficient and necessary conditions to ensure (i) and (ii). For MMDs on separable metric spaces, we characterize those kernels that separate Bochner embeddable measures and introduce simple conditions for separating all measures with unbounded kernels and for controlling convergence with bounded kernels. We use these results on R^d to substantially broaden the known conditions for KSD separation and convergence control and to develop the first KSDs known to exactly metrize weak convergence to P. Along the way, we highlight the implications of our results for hypothesis testing, measuring and improving sample quality, and sampling with Stein variational gradient descent.
-          </p>
-        </div>
-        <p />
-        </li>
         <li><b> Do Language Models Know When They're Hallucinating References?  (<a href="https://arxiv.org/pdf/2305.18248.pdf">arxiv</a>, <a href="https://github.com/microsoft/hallucinated-references">code</a>)</b>
           <br /><i>Ayush Agrawal, Mirac Suzgun, Lester Mackey, and Adam Tauman Kalai.</i>
           <br />Findings of the Association for Computational Linguistics: EACL. Mar. 2024.
