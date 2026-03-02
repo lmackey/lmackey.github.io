@@ -77,7 +77,7 @@
               <div id="wildcat" class="collapse">
               <p></p>
               <p>
-              We introduce WildCat, a high-accuracy, low-cost approach to compressing the attention mechanism in neural networks. While attention is a staple of modern network architectures, it is also notoriously expensive to deploy due to resource requirements that scale quadratically with the input sequence length $n$. WildCat avoids these quadratic costs by only attending over a small weighted coreset. Crucially, we select the coreset using a fast but spectrally-accurate subsampling algorithm -- randomly pivoted Cholesky -- and weight the elements optimally to minimise reconstruction error. Remarkably, given bounded inputs, WildCat approximates exact attention with super-polynomial 
+              We introduce WildCat, a high-accuracy, low-cost approach to compressing the attention mechanism in neural networks. While attention is a staple of modern network architectures, it is also notoriously expensive to deploy due to resource requirements that scale quadratically with the input sequence length n. WildCat avoids these quadratic costs by only attending over a small weighted coreset. Crucially, we select the coreset using a fast but spectrally-accurate subsampling algorithm -- randomly pivoted Cholesky -- and weight the elements optimally to minimise reconstruction error. Remarkably, given bounded inputs, WildCat approximates exact attention with super-polynomial 
               <!--$O(n^{-\sqrt{\log(\log(n))}})$-->
               <math display="inline">
               <mi>O</mi>
@@ -121,6 +121,18 @@
               <p></p>
               <p>
               Cross-validation (CV) is known to provide asymptotically exact tests and confidence intervals for model improvement but only when the model comparison is relatively stable. Surprisingly, we prove that even simple, individually stable models can generate relatively unstable comparisons, calling into question the validity of CV inference. Specifically, we show that the Lasso and its close cousin, soft-thresholding, generate relatively unstable comparisons and invalid CV inferences, even in the most favorable of learning settings and even when both models are individually stable. These findings highlight the importance of verifying relative stability before deploying CV for model comparison.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Estimating Treatment Effects with Independent Component Analysis.  (<a href="https://arxiv.org/pdf/2507.16467">arxiv</a>, <a href="https://github.com/rpatrik96/ica_causal_effect">code</a>)</b>
+          <br /><i>Patrik Reizinger, Lester Mackey, Wieland Brendel, and Rahul Krishnan.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#ica">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ica" class="collapse">
+              <p></p>
+              <p>
+              Independent Component Analysis (ICA) uses a measure of non-Gaussianity to identify latent sources from data and estimate their mixing coefficients (Shimizu et al., 2006). Meanwhile, higher-order Orthogonal Machine Learning (OML) exploits non-Gaussian treatment noise to provide more accurate estimates of treatment effects in the presence of confounding nuisance effects (Mackey et al., 2018). Remarkably, we find that the two approaches rely on the same moment conditions for consistent estimation. We then seize upon this connection to show how ICA can be effectively used for treatment effect estimation. Specifically, we prove that linear ICA can consistently estimate multiple treatment effects, even in the presence of Gaussian confounders, and identify regimes in which ICA is provably more sample-efficient than OML for treatment effect estimation. Our synthetic demand estimation experiments confirm this theory and demonstrate that linear ICA can accurately estimate treatment effects even in the presence of nonlinear nuisance.
               </p>
               </div>
               <p />
