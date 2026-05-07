@@ -94,61 +94,6 @@
               </div>
               <p />
               </li>
-        <li><b>WildCat: Near-Linear Attention in Theory and Practice.  (<a href="https://www.arxiv.org/pdf/2602.10056">arxiv</a>, <a href="https://github.com/microsoft/wildcat">code</a>)</b>
-          <br /><i>Tobias Schr&ouml;der and Lester Mackey.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#wildcat">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="wildcat" class="collapse">
-              <p></p>
-              <p>
-              We introduce WildCat, a high-accuracy, low-cost approach to compressing the attention mechanism in neural networks. While attention is a staple of modern network architectures, it is also notoriously expensive to deploy due to resource requirements that scale quadratically with the input sequence length n. WildCat avoids these quadratic costs by only attending over a small weighted coreset. Crucially, we select the coreset using a fast but spectrally-accurate subsampling algorithm -- randomly pivoted Cholesky -- and weight the elements optimally to minimise reconstruction error. Remarkably, given bounded inputs, WildCat approximates exact attention with super-polynomial 
-              <!--$O(n^{-\sqrt{\log(\log(n))}})$-->
-              <math display="inline">
-              <mi>O</mi>
-              <mo stretchy="false">(</mo>
-              <msup>
-                <mi>n</mi>
-                <mrow>
-                  <mo>-</mo>
-                  <msqrt>
-                    <mrow>
-                      <mi>log(log(n))</mi>
-                    </mrow>
-                  </msqrt>
-                </mrow>
-              </msup>
-              <mo stretchy="false">)</mo>
-            </math>
-            error decay while running in near-linear 
-            <!--$O(n^{1+o(1)})$-->
-            <math display="inline">
-              <mi>O</mi>
-              <mo stretchy="false">(</mo>
-              <msup>
-                <mi>n</mi>
-                <mrow>
-                  <mi>1+o(1)</mi>
-                </mrow>
-              </msup>
-              <mo stretchy="false">)</mo>
-            </math>
-            time. In contrast, prior practical approximations either lack error guarantees or require quadratic runtime to guarantee such high fidelity. We couple this advance with a GPU-optimized PyTorch implementation and a suite of benchmark experiments demonstrating the benefits of WildCat for image generation, image classification, and language model KV cache compression.
-              </p>
-              </div>
-              <p />
-              </li>
-        <li><b>The Relative Instability of Model Comparison with Cross-validation.  (<a href="https://arxiv.org/pdf/2508.04409">arxiv</a>, <a href="https://github.com/alexandre-bayle/ricv">code</a>)</b>
-          <br /><i>Alexandre Bayle, Lucas Janson, and Lester Mackey.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#ricv">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="ricv" class="collapse">
-              <p></p>
-              <p>
-              Cross-validation (CV) is known to provide asymptotically exact tests and confidence intervals for model improvement but only when the model comparison is relatively stable. Surprisingly, we prove that even simple, individually stable models can generate relatively unstable comparisons, calling into question the validity of CV inference. Specifically, we show that the Lasso and its close cousin, soft-thresholding, generate relatively unstable comparisons and invalid CV inferences, even in the most favorable of learning settings and even when both models are individually stable. These findings highlight the importance of verifying relative stability before deploying CV for model comparison.
-              </p>
-              </div>
-              <p />
-              </li>
         <li><b>Estimating Treatment Effects with Independent Component Analysis.  (<a href="https://arxiv.org/pdf/2507.16467">arxiv</a>, <a href="https://github.com/rpatrik96/ica_causal_effect">code</a>)</b>
           <br /><i>Patrik Reizinger, Lester Mackey, Wieland Brendel, and Rahul Krishnan.</i>
           <br/><a class="btn" data-toggle="collapse" data-target="#ica">View details &raquo</a>
@@ -181,18 +126,6 @@
               <p></p>
               <p>
               This paper presents a new perspective for the flexible and efficient representation of geospatial data, tailored to and empowered by AI: Earth embeddings. Earth embeddings provide a unified and accessible vector representation of local geographic characteristics. They fuse different geospatial data sources across time and space, compress highly-correlated raw geospatial data into one dense representation, can be used to guide interpolation between data observations, and can serve as a universal location token for foundation models. This provides a powerful alternative to existing geospatial workflows that rely on heterogeneous data, hard-to-acquire expertise, and significant computation by the user: embeddings instead provide convenient representations, easily adaptable for numerous downstream tasks. We posit that Earth embeddings redefine geospatial analytics, transforming it from fragmented, task-specific modeling into a coherent, generalizable framework for AI. We approach this from both the users' and developers' perspectives, outlining a path for how the rapidly developing technology of Earth embeddings can reshape the way we store, represent, and use geospatial data, evidenced by recent research charting initial directions. We call on Earth embedding users and developers to align methodological and applied development and deployment within an interdisciplinary, open-source oriented research community.
-              </p>
-              </div>
-              <p />
-              </li>
-          <li><b>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner.  (<a href="https://www.arxiv.org/pdf/2510.03206">arxiv</a>)</b>
-          <br /><i>Cai Zhou, Chenxiao Yang, Yi Hu, Chenyu Wang, Chubin Zhang, Muhan Zhang, Lester Mackey, Tommi Jaakkola, Stephen Bates, and Dinghuai Zhang.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#ccdd">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="ccdd" class="collapse">
-              <p></p>
-              <p>
-              Diffusion language models, especially masked discrete diffusion models, have achieved great success recently. While there are some theoretical and primary empirical results showing the advantages of latent reasoning with looped transformers or continuous chain-of-thoughts, continuous diffusion models typically underperform their discrete counterparts. In this paper, we argue that diffusion language models do not necessarily need to be in the discrete space. In particular, we prove that continuous diffusion models have stronger expressivity than discrete diffusions and looped transformers. We attribute the contradiction between the theoretical expressiveness and empirical performance to their practical trainability: while continuous diffusion provides intermediate supervision that looped transformers lack, they introduce additional difficulty decoding tokens into the discrete token space from the continuous representation space. We therefore propose Coevolutionary Continuous Discrete Diffusion (CCDD), which defines a joint multimodal diffusion process on the union of a continuous representation space and a discrete token space, leveraging a single model to simultaneously denoise in the joint space. By combining two modalities, CCDD is expressive with rich semantics in the latent space, as well as good trainability and sample quality with the help of explicit discrete tokens. We also propose effective architectures and advanced training/sampling techniques for CCDD, which reveals strong empirical performance in extensive language modeling experiments on real-world tasks.
               </p>
               </div>
               <p />
@@ -299,6 +232,76 @@
 	  <h4>Publications</h4> 
 	  <div class="contentarea">
 	    <ul class="normal">
+        <li><b>WildCat: Near-Linear Attention in Theory and Practice.  (<a href="https://www.arxiv.org/pdf/2602.10056">arxiv</a>, <a href="https://github.com/microsoft/wildcat">code</a>)</b>
+          <br /><i>Tobias Schr&ouml;der and Lester Mackey.</i>
+          <br />International Conference on Machine Learning (ICML). July 2026.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#wildcat">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="wildcat" class="collapse">
+              <p></p>
+              <p>
+              We introduce WildCat, a high-accuracy, low-cost approach to compressing the attention mechanism in neural networks. While attention is a staple of modern network architectures, it is also notoriously expensive to deploy due to resource requirements that scale quadratically with the input sequence length n. WildCat avoids these quadratic costs by only attending over a small weighted coreset. Crucially, we select the coreset using a fast but spectrally-accurate subsampling algorithm -- randomly pivoted Cholesky -- and weight the elements optimally to minimise reconstruction error. Remarkably, given bounded inputs, WildCat approximates exact attention with super-polynomial 
+              <!--$O(n^{-\sqrt{\log(\log(n))}})$-->
+              <math display="inline">
+              <mi>O</mi>
+              <mo stretchy="false">(</mo>
+              <msup>
+                <mi>n</mi>
+                <mrow>
+                  <mo>-</mo>
+                  <msqrt>
+                    <mrow>
+                      <mi>log(log(n))</mi>
+                    </mrow>
+                  </msqrt>
+                </mrow>
+              </msup>
+              <mo stretchy="false">)</mo>
+            </math>
+            error decay while running in near-linear 
+            <!--$O(n^{1+o(1)})$-->
+            <math display="inline">
+              <mi>O</mi>
+              <mo stretchy="false">(</mo>
+              <msup>
+                <mi>n</mi>
+                <mrow>
+                  <mi>1+o(1)</mi>
+                </mrow>
+              </msup>
+              <mo stretchy="false">)</mo>
+            </math>
+            time. In contrast, prior practical approximations either lack error guarantees or require quadratic runtime to guarantee such high fidelity. We couple this advance with a GPU-optimized PyTorch implementation and a suite of benchmark experiments demonstrating the benefits of WildCat for image generation, image classification, and language model KV cache compression.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>The Relative Instability of Model Comparison with Cross-validation.  (<a href="https://arxiv.org/pdf/2508.04409">arxiv</a>, <a href="https://github.com/alexandre-bayle/ricv">code</a>)</b>
+          <br /><i>Alexandre Bayle, Lucas Janson, and Lester Mackey.</i>
+          <br />International Conference on Machine Learning (ICML). July 2026.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#ricv">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ricv" class="collapse">
+              <p></p>
+              <p>
+              Cross-validation (CV) is known to provide asymptotically exact tests and confidence intervals for model improvement but only when the model comparison is relatively stable. Surprisingly, we prove that even simple, individually stable models can generate relatively unstable comparisons, calling into question the validity of CV inference. Specifically, we show that the Lasso and its close cousin, soft-thresholding, generate relatively unstable comparisons and invalid CV inferences, even in the most favorable of learning settings and even when both models are individually stable. These findings highlight the importance of verifying relative stability before deploying CV for model comparison.
+              </p>
+              </div>
+              <p />
+              </li>
+          <li><b>Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner.  (<a href="https://www.arxiv.org/pdf/2510.03206">arxiv</a>)</b>
+          <br /><i>Cai Zhou, Chenxiao Yang, Yi Hu, Chenyu Wang, Chubin Zhang, Muhan Zhang, Lester Mackey, Tommi Jaakkola, Stephen Bates, and Dinghuai Zhang.</i>
+          <br />International Conference on Machine Learning (ICML). July 2026.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#ccdd">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ccdd" class="collapse">
+              <p></p>
+              <p>
+              Diffusion language models, especially masked discrete diffusion models, have achieved great success recently. While there are some theoretical and primary empirical results showing the advantages of latent reasoning with looped transformers or continuous chain-of-thoughts, continuous diffusion models typically underperform their discrete counterparts. In this paper, we argue that diffusion language models do not necessarily need to be in the discrete space. In particular, we prove that continuous diffusion models have stronger expressivity than discrete diffusions and looped transformers. We attribute the contradiction between the theoretical expressiveness and empirical performance to their practical trainability: while continuous diffusion provides intermediate supervision that looped transformers lack, they introduce additional difficulty decoding tokens into the discrete token space from the continuous representation space. We therefore propose Coevolutionary Continuous Discrete Diffusion (CCDD), which defines a joint multimodal diffusion process on the union of a continuous representation space and a discrete token space, leveraging a single model to simultaneously denoise in the joint space. By combining two modalities, CCDD is expressive with rich semantics in the latent space, as well as good trainability and sample quality with the help of explicit discrete tokens. We also propose effective architectures and advanced training/sampling techniques for CCDD, which reveals strong empirical performance in extensive language modeling experiments on real-world tasks.
+              </p>
+              </div>
+              <p />
+              </li>
         <li><b>It's Hard to Be Normal: The Impact of Noise on Structure-agnostic Estimation.  (<a href="https://arxiv.org/pdf/2507.02275">arxiv</a>, <a href="https://github.com/JikaiJin/ACE">code</a>)</b>
           <br /><i>Jikai Jin, Lester Mackey, and Vasilis Syrgkanis.</i>
           <br />Advances in Neural Processing Systems (NeurIPS). December 2025.
