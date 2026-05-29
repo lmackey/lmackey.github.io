@@ -276,6 +276,26 @@
               </div>
               <p />
               </li>
+        <li><b>Thinned Mean Field Langevin Dynamics.  (<a href="https://arxiv.org/pdf/2605.28589">arxiv</a>, <a href="https://github.com/hudsonchen/thinned_mfld">code</a>)</b>
+          <br /><i>Zonghao Chen, Heishiro Kanagawa, François-Xavier Briol, Chris J. Oates, and Lester Mackey.</i>
+          <br />International Conference on Machine Learning (ICML). July 2026.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#ktmfld">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="ktmfld" class="collapse">
+              <p></p>
+              <p>
+              Several important learning tasks can be formulated as minimizing an entropy-regularized objective over an appropriate space of probability distributions. 
+              Mean-field Langevin dynamics (MFLD) facilitate computation in this general context, casting the minimizer as the invariant distribution of a McKean-Vlasov process, 
+              which can be numerically discretized using N particles and thus simulated. 
+              However, simulating this interacting particle system has computational complexity of order N^2. 
+              Motivated by recent research into kernel thinning, we propose KT-MFLD, in which each particle interacts only with a thinned particle coreset of size N^{1/2}. 
+              KT-MFLD thus reduces the computational complexity to order N^{3/2} while, under mild regularity conditions, achieving the same convergence guarantees (up to logarithmic factors) as MFLD. 
+              Our theoretical analysis is empirically confirmed on tasks including the training of student-teacher neural networks, quantization with maximum mean discrepancy, 
+              and computation of predictively-oriented posteriors in a post-Bayesian framework.
+              </p>
+              </div>
+              <p />
+              </li>
         <li><b>The Relative Instability of Model Comparison with Cross-validation.  (<a href="https://arxiv.org/pdf/2508.04409">arxiv</a>, <a href="https://github.com/alexandre-bayle/ricv">code</a>)</b>
           <br /><i>Alexandre Bayle, Lucas Janson, and Lester Mackey.</i>
           <br />International Conference on Machine Learning (ICML). July 2026.  
