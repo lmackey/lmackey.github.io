@@ -70,6 +70,18 @@
 	  <h4>In the Pipeline</h4>
 	  <div class="contentarea">
 	    <ul class="normal">
+      <li><b>Express Language Modeling. (<a href="https://arxiv.org/pdf/2606.10944">arxiv</a>, <a href="https://github.com/microsoft/thinformer">code</a>)</b>
+          <br /><i>Albert Gong, Annabelle Michael Carrell, Raaz Dwivedi, and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#express">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="express" class="collapse">
+              <p></p>
+              <p>
+              We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering log<sup>3/2</sup>(n)/s approximation error with only O(s) memory and O(s<sup>2</sup>log<sup>2</sup>(n)) compression overhead for a sequence of length n. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.
+              </p>
+              </div>
+              <p />
+              </li>
         <li><b>Enhancing AI and Dynamical Subseasonal Forecasts with Probabilistic Bias Correction.  (<a href="https://arxiv.org/pdf/2604.16238">arxiv</a>, <a href="https://github.com/mouatadid/pbc">code</a>)</b>
           <br /><i>Hannah Guan, Soukayna Mouatadid, Paulo Orenstein, Judah Cohen, Haiyu Dong, Zekun Ni, Jeremy Berman, Genevieve Flaspohler, Alex Lu, Jakob Schloer, Joshua Talib, Jonathan A. Weyn, and Lester Mackey.</i>
           <br/><a class="btn" data-toggle="collapse" data-target="#pbc">View details &raquo</a>
