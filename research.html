@@ -130,18 +130,6 @@
               </div>
               <p />
               </li>
-        <li><b>Causal integration of chemical structures improves representations of microscopy images for morphological profiling.  (<a href="https://arxiv.org/pdf/2504.09544">arxiv</a>, <a href="https://github.com/microsoft/micon">code</a>)</b>
-          <br /><i>Yemin Yu, Neil Tenenholtz, Lester Mackey, Ying Wei, David Alvarez-Melis, Ava P. Amini, and Alex X. Lu.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#micon">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="micon" class="collapse">
-              <p></p>
-              <p>
-              Recent advances in self-supervised deep learning have improved our ability to quantify cellular morphological changes in high-throughput microscopy screens, a process known as morphological profiling. However, most current methods only learn from images, despite many screens being inherently multimodal, as they involve both a chemical or genetic perturbation as well as an image-based readout. We hypothesized that incorporating chemical compound structure during self-supervised pre-training could improve learned representations of images in high-throughput microscopy screens. We introduce a representation learning framework, MICON (Molecular-Image Contrastive Learning), that models chemical compounds as treatments that induce counterfactual transformations of cell phenotypes. MICON significantly outperforms classical hand-crafted features such as CellProfiler and existing deep-learning-based representation learning methods in challenging evaluation settings where models must identify reproducible effects of drugs across independent replicates and data-generating centers. We demonstrate that incorporating chemical compound information into the learning process provides consistent improvements in our evaluation setting and that modeling compounds specifically as treatments in a causal framework outperforms approaches that directly align images and compounds in a single representation space. Our findings point to a new direction for representation learning in morphological profiling, suggesting that methods should explicitly account for the multimodal nature of microscopy screening data.
-              </p>
-              </div>
-              <p />
-              </li>
         <li><b>Cheap Permutation Testing.  (<a href="https://arxiv.org/pdf/2502.07672">arxiv</a>, <a href="https://github.com/microsoft/cheap-permutations">code</a>)</b>
           <br /><i>Carles Domingo-Enrich, Raaz Dwivedi, and Lester Mackey.</i>
           <br/><a class="btn" data-toggle="collapse" data-target="#cheaper">View details &raquo</a>
@@ -261,6 +249,19 @@
               <p></p>
               <p>
               This work introduces a new, explicit bound on the Hellinger distance between a continuous random variable and a Gaussian with matching mean and variance. As example applications, we derive a quantitative Hellinger central limit theorem and efficient concentration inequalities for U-statistics.
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Integrating chemical structures as treatments improves representations of microscopy images for morphological profiling.  (<a href="https://arxiv.org/pdf/2504.09544">arxiv</a>, <a href="https://github.com/microsoft/micon">code</a>)</b>
+          <br /><i>Yemin Yu, Neil Tenenholtz, Lester Mackey, Ying Wei, David Alvarez-Melis, Ava P. Amini, and Alex X. Lu.</i>
+          <br />PLOS Computational Biology. July 2026.  
+          <br/><a class="btn" data-toggle="collapse" data-target="#micon">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="micon" class="collapse">
+              <p></p>
+              <p>
+              Recent advances in self-supervised deep learning have improved our ability to quantify cellular morphological changes in high-throughput microscopy screens, a process known as morphological profiling. However, most current methods only learn from images, despite many screens being inherently multimodal, as they involve both a chemical or genetic perturbation as well as an image-based readout. We hypothesized that incorporating chemical compound structures during self-supervised pre-training could improve learned representations of images from high-throughput microscopy screens. We introduce a representation learning framework, MICON (Molecular-Image Contrastive Learning), that models chemical compounds as treatments that induce transformations of cell phenotypes. MICON significantly outperforms classical hand-crafted features such as CellProfiler and existing deep-learning-based representation learning methods in challenging evaluation settings where models must identify reproducible effects of drugs across independent replicates and data-generating centers. We demonstrate that incorporating chemical compound information into the learning process provides small, but consistent improvements in performance and that modeling compounds specifically as treatments outperforms approaches that directly align images and compounds in a single representation space. Our findings point to a new direction for representation learning in morphological profiling, suggesting that methods should explicitly account for the multimodal nature of microscopy screening data.
               </p>
               </div>
               <p />
