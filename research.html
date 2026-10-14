@@ -70,14 +70,27 @@
 	  <h4>In the Pipeline</h4>
 	  <div class="contentarea">
 	    <ul class="normal">
-        <li><b>Advancing Subseasonal Forecasting with Machine Learning. (<a href="https://arxiv.org/pdf/2604.16238">arxiv</a>, <a href="https://github.com/mouatadid/pbc">code</a>)</b>
-          <br /><i>Hannah Guan, Soukayna Mouatadid, Paulo Orenstein, Judah Cohen, Haiyu Dong, Zekun Ni, Jeremy Berman, Genevieve Flaspohler, Alex Lu, Jakob Schloer, Joshua Talib, Jonathan A. Weyn, and Lester Mackey.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#pbc">View details &raquo</a>
+        <li><b>Universal Bounds for Self-Normalized Kullback-Leibler Estimation.  (<a href="https://arxiv.org/pdf/2610.12851">arxiv</a>)</b>
+          <br /><i>Buu Phan, Lester Mackey, and David Alvarez-Melis.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#snkl">View details &raquo</a>
               <!--colapsed text-->
-              <div id="pbc" class="collapse">
+              <div id="snkl" class="collapse">
               <p></p>
               <p>
-              Decision-makers rely on weather forecasts to plant crops, manage wildfires, allocate water and energy, and prepare for weather extremes. Today, such forecasts enjoy unprecedented accuracy out to two weeks thanks to steady advances in physics-based dynamical models and data-driven artificial intelligence (AI) models. However, model skill drops precipitously at subseasonal timescales (2 - 6 weeks ahead), due to compounding errors, systemic model biases, and the chaotic nature of the atmosphere. To counter this degradation, we introduce probabilistic bias correction (PBC), a machine learning framework that substantially reduces systematic error by learning to correct historical probabilistic forecasts. When applied to the leading dynamical and AI models from the European Centre for Medium-Range Weather Forecasts (ECMWF), PBC doubles the modest subseasonal skill of the AI Forecasting System and improves the skill of the operationally-debiased dynamical model for 91% of pressure, 92% of temperature, and 98% of precipitation targets. We designed PBC for operational deployment, and, in ECMWF's 2025 real-time forecasting competition, its global forecasts placed first for all weather variables and lead times, outperforming the dynamical models from six operational forecasting centers, an international dynamical multi-model ensemble, ECMWF's AI Forecasting System, and the forecasting systems of 34 teams worldwide. These probabilistic skill gains translate into more accurate prediction of extreme events and have the potential to improve agricultural planning, energy management, and disaster preparedness in vulnerable communities.
+              This work studies an entropy-based estimator of Kullback-Leibler (KL) divergence constructed from normalized importance weights. We prove a universal finite-sample bound showing that its expectation can exceed the target-proposal KL divergence by at most log 2 for any sample size. We then characterize the KL divergence between the distribution induced by importance-weighted resampling and the proposal, showing that it is upper bounded by both the expectation of the entropy-based estimator and the target-proposal KL divergence. Importantly, these bounds require neither bounded importance weights nor finite higher moments. We apply these results to test-time alignment of generative models via Soft Best-of-N sampling, an importance-sampling-based scaling technique proposed by Verdun et al. (2025), and to relative entropy coding, obtaining finite-sample policy-divergence certificates and moment-free bounds on coding cost.
+              </p>
+              </div>
+              <p />
+              </li>
+        </li>
+        <li><b>KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning.  (<a href="https://arxiv.org/pdf/2512.19605">arxiv</a>)</b>
+          <br /><i>Eric Zimmermann, Harley Wiltzer, Justin Szeto, David Alvarez-Melis, and Lester Mackey.</i>
+          <br/><a class="btn" data-toggle="collapse" data-target="#kerjepa">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="kerjepa" class="collapse">
+              <p></p>
+              <p>
+              Breakthroughs in self-supervised Joint-Embedding Predictive Architectures (JEPAs) have established that regularizing Euclidean representations toward isotropic Gaussian priors yields provable gains in training stability and downstream generalization. We introduce a new, flexible family of Euclidean joint embedding self-supervised learning algorithms with kernel-based regularizers. One instance of this family corresponds to the SIGReg Epps-Pulley regularizer which approximates a sliced Maximum Mean Discrepancy (MMD) with a Gaussian prior and Gaussian kernel. By expanding the class of viable kernels and priors and computing the closed-form high-dimensional limit of sliced discrepancies, we develop alternative methods with improved training stability and design flexibility and leverage those techniques to train strong vision learners at scale.
               </p>
               </div>
               <p />
@@ -102,30 +115,6 @@
               <p></p>
               <p>
               Independent Component Analysis (ICA) uses a measure of non-Gaussianity to identify latent sources from data and estimate their mixing coefficients (Shimizu et al., 2006). Meanwhile, higher-order Orthogonal Machine Learning (OML) exploits non-Gaussian treatment noise to provide more accurate estimates of treatment effects in the presence of confounding nuisance effects (Mackey et al., 2018). Remarkably, we find that the two approaches rely on the same moment conditions for consistent estimation. We then seize upon this connection to show how ICA can be effectively used for treatment effect estimation. Specifically, we prove that linear ICA can consistently estimate multiple treatment effects, even in the presence of Gaussian confounders, and identify regimes in which ICA is provably more sample-efficient than OML for treatment effect estimation. Our synthetic demand estimation experiments confirm this theory and demonstrate that linear ICA can accurately estimate treatment effects even in the presence of nonlinear nuisance.
-              </p>
-              </div>
-              <p />
-              </li>
-        <li><b>KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning.  (<a href="https://arxiv.org/pdf/2512.19605">arxiv</a>)</b>
-          <br /><i>Eric Zimmermann, Harley Wiltzer, Justin Szeto, David Alvarez-Melis, and Lester Mackey.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#kerjepa">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="kerjepa" class="collapse">
-              <p></p>
-              <p>
-              Recent breakthroughs in self-supervised Joint-Embedding Predictive Architectures (JEPAs) have established that regularizing Euclidean representations toward isotropic Gaussian priors yields provable gains in training stability and downstream generalization. We introduce a new, flexible family of KerJEPAs, self-supervised learning algorithms with kernel-based regularizers. One instance of this family corresponds to the recently-introduced LeJEPA Epps-Pulley regularizer which approximates a sliced maximum mean discrepancy (MMD) with a Gaussian prior and Gaussian kernel. By expanding the class of viable kernels and priors and computing the closed-form high-dimensional limit of sliced MMDs, we develop alternative KerJEPAs with a number of favorable properties including improved training stability and design flexibility.
-              </p>
-              </div>
-              <p />
-              </li>
-        <li><b>Cheap Permutation Testing.  (<a href="https://arxiv.org/pdf/2502.07672">arxiv</a>, <a href="https://github.com/microsoft/cheap-permutations">code</a>)</b>
-          <br /><i>Carles Domingo-Enrich, Raaz Dwivedi, and Lester Mackey.</i>
-          <br/><a class="btn" data-toggle="collapse" data-target="#cheaper">View details &raquo</a>
-              <!--colapsed text-->
-              <div id="cheaper" class="collapse">
-              <p></p>
-              <p>
-              Permutation tests are a popular choice for distinguishing distributions and testing independence, due to their exact, finite-sample control of false positives and their minimax optimality when paired with U-statistics. However, standard permutation tests are also expensive, requiring a test statistic to be computed hundreds or thousands of times to detect a separation between distributions. In this work, we offer a simple approach to accelerate testing: group your datapoints into bins and permute only those bins. For U and V-statistics, we prove that these cheap permutation tests have two remarkable properties. First, by storing appropriate sufficient statistics, a cheap test can be run in time comparable to evaluating a single test statistic. Second, cheap permutation power closely approximates standard permutation power. As a result, cheap tests inherit the exact false positive control and minimax optimality of standard permutation tests while running in a fraction of the time. We complement these findings with improved power guarantees for standard permutation testing and experiments demonstrating the benefits of cheap permutations over standard maximum mean discrepancy (MMD), Hilbert-Schmidt independence criterion (HSIC), random Fourier feature, Wilcoxon-Mann-Whitney, aggregated MMD, cross-MMD, and cross-HSIC tests.  
               </p>
               </div>
               <p />
@@ -184,6 +173,19 @@
 	  <h4>Publications</h4> 
 	  <div class="contentarea">
 	    <ul class="normal">
+        <li><b>Advancing Subseasonal Forecasting with Machine Learning. (<a href="https://www.nature.com/articles/s41586-026-11126-x">paper</a>, <a href="https://github.com/mouatadid/pbc">code</a>, <a href="https://www.microsoft.com/en-us/research/story/new-ai-framework-bridges-a-critical-gap-in-mid-range-weather-forecasts/">blog</a>, <a href="https://youtu.be/7Qv1RTPm2-0?si=tVbpCxxv01Fh6JXY&t=1690">Hannah's talk</a>)</b>
+          <br /><i>Hannah Guan, Soukayna Mouatadid, Paulo Orenstein, Judah Cohen, Haiyu Dong, Zekun Ni, Jeremy Berman, Genevieve Flaspohler, Alex Lu, Jakob Schloer, Joshua Talib, Jonathan A. Weyn, and Lester Mackey.</i>
+          <br />Nature. October 2026.
+          <br/><a class="btn" data-toggle="collapse" data-target="#pbc">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="pbc" class="collapse">
+              <p></p>
+              <p>
+              Decision-makers rely on weather forecasts to plant crops, manage wildfires, allocate water and energy, and prepare for weather extremes. Today, such forecasts enjoy unprecedented accuracy out to two weeks thanks to steady advances in physics-based dynamical models and data-driven artificial intelligence (AI) models. However, model skill drops precipitously at subseasonal timescales (2 - 6 weeks ahead), due to compounding errors, systemic model biases, and the chaotic nature of the atmosphere. To counter this degradation, we introduce probabilistic bias correction (PBC), a machine learning framework that substantially reduces systematic error by learning to correct historical probabilistic forecasts. When applied to the leading dynamical and AI models from the European Centre for Medium-Range Weather Forecasts (ECMWF), PBC doubles the modest subseasonal skill of the AI Forecasting System and improves the skill of the operationally-debiased dynamical model for 91% of pressure, 92% of temperature, and 98% of precipitation targets. We designed PBC for operational deployment, and, in ECMWF's 2025 real-time forecasting competition, its global forecasts placed first for all weather variables and lead times, outperforming the dynamical models from six operational forecasting centers, an international dynamical multi-model ensemble, ECMWF's AI Forecasting System, and the forecasting systems of 34 teams worldwide. These probabilistic skill gains translate into more accurate prediction of extreme events and have the potential to improve agricultural planning, energy management, and disaster preparedness in vulnerable communities.
+              </p>
+              </div>
+              <p />
+              </li>
         <li><b>Express Language Modeling. (<a href="https://arxiv.org/pdf/2606.10944">arxiv</a>, <a href="https://github.com/microsoft/thinformer">code</a>)</b>
           <br /><i>Albert Gong, Annabelle Michael Carrell, Raaz Dwivedi, and Lester Mackey.</i>
           <br />Advances in Neural Processing Systems (NeurIPS). December 2026.
@@ -197,7 +199,20 @@
               </div>
               <p />
               </li>
-        <li><b>Domain-Aware Scaling Laws Uncover Data Synergy.  (<a href="https://arxiv.org/pdf/2607.11052">arxiv</a>)</b>
+        <li><b>Cheap Permutation Testing.  (<a href="https://arxiv.org/pdf/2502.07672">arxiv</a>, <a href="https://github.com/microsoft/cheap-permutations">code</a>)</b>
+          <br /><i>Carles Domingo-Enrich, Raaz Dwivedi, and Lester Mackey.</i>
+          <br />Annals of Statistics. To appear.
+          <br/><a class="btn" data-toggle="collapse" data-target="#cheaper">View details &raquo</a>
+              <!--colapsed text-->
+              <div id="cheaper" class="collapse">
+              <p></p>
+              <p>
+              Permutation tests are a popular choice for distinguishing distributions and testing independence, due to their exact, finite-sample control of false positives and their minimax optimality when paired with U-statistics. However, standard permutation tests are also expensive, requiring a test statistic to be computed hundreds or thousands of times to detect a separation between distributions. In this work, we offer a simple approach to accelerate testing: group your datapoints into bins and permute only those bins. For U and V-statistics, we prove that these cheap permutation tests have two remarkable properties. First, by storing appropriate sufficient statistics, a cheap test can be run in time comparable to evaluating a single test statistic. Second, cheap permutation power closely approximates standard permutation power. As a result, cheap tests inherit the exact false positive control and minimax optimality of standard permutation tests while running in a fraction of the time. We complement these findings with improved power guarantees for standard permutation testing and experiments demonstrating the benefits of cheap permutations over standard maximum mean discrepancy (MMD), Hilbert-Schmidt independence criterion (HSIC), random Fourier feature, Wilcoxon-Mann-Whitney, aggregated MMD, cross-MMD, and cross-HSIC tests.  
+              </p>
+              </div>
+              <p />
+              </li>
+        <li><b>Domain-Aware Scaling Laws Uncover Data Synergy.  (<a href="https://data-syn.github.io/">website</a>, <a href="https://arxiv.org/pdf/2607.11052">arxiv</a>, <a href="https://github.com/kimiah/DataSynergy">code</a>)</b>
         <br /><i>Kimia Hamidieh, David Alvarez-Melis, and Lester Mackey.</i>
         <br />Conference on Language Modeling (COLM). October 2026.
         <br/><a class="btn" data-toggle="collapse" data-target="#datasynergy">View details &raquo</a>
